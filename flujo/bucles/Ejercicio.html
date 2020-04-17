@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio con bucle</title>
+</head>
+
+<body>
+    <script>
+        // contar mil numeros empezando por el 1 y que solo aparezcan los pares
+        var inicio = parseInt(prompt('Valor inicial'));
+        var fin = parseInt(prompt('Valor Final'));
+
+        var aux = 0;
+
+        for (i = inicio; i <= fin && fin <= 1000; i++) {
+
+            if (i % 2 == 0) {
+                console.log(i);
+                aux++;
+            }
+        }
+        console.log('Pares: ' + aux);
+    </script>
+
+</body>
+
+</html>
