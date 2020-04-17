@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Ejercicio</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // dados 54321 segundos quiero que me calculeis la cantidad horas minutos y segundos en esa cantidad
+        // en consola me tendra que decir  la cantidad de horas minutos y segundos
+
+        var segundosTotales = 54321;
+        var segundosTotales = 54321;
+
+        var horas;
+        var minutos;
+        var segundos;
+
+        horas = segundosTotales / (60 * 60);
+        horas = parseInt(horas);
+
+        segundos = segundosTotales % (60 * 60);
+        minutos = segundos / 60;
+        minutos = parseInt(minutos);
+        segundos = segundos % 60;
+
+
+
+        console.log("horas: " + horas + " " + "minutos: " + minutos + " " + "segundos: " + segundos);
+
+
+
+    </script>
+</body>
+
+</html>
