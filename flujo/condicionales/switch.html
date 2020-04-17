@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+
+<body>
+
+    <script>
+        var palabra = prompt('Dame un color');
+        palabra = palabra.toLocaleLowerCase();
+
+        switch (palabra) {
+            case "granet":
+            case "rojo":
+                alert('red');
+                break;
+            case "amarillo":
+                alert('yellow');
+                break;
+            case "azul":
+                alert('blue');
+                break;
+            default:
+                alert('No tenemos esa palabra')
+                break;
+        }
+
+    </script>
+
+</body>
+
+</html>
