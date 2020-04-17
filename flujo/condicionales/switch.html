@@ -10,6 +10,7 @@
 <body>
 
     <script>
+        /*
         var palabra = prompt('Dame un color');
         palabra = palabra.toLocaleLowerCase();
 
@@ -25,10 +26,32 @@
                 alert('blue');
                 break;
             default:
-                alert('No tenemos esa palabra')
+                alert('No tenemos esa palabra');
                 break;
         }
+        */
 
+        var anoNacimiento = prompt('Introcude tu edad de nacimiento');
+        anoNacimiento = parseInt(anoNacimiento);
+        var estado = false;
+        if (anoNacimiento != 0 && anoNacimiento > 0) {
+
+            estado = true;
+
+            switch (estado) {
+                case (anoNacimiento >= 1980 && anoNacimiento < 1990):
+                    alert('Decada de los 80');
+                    break;
+                case (anoNacimiento >= 1990 && anoNacimiento < 2000):
+                    alert('Decada de los 90');
+                    break;
+                default:
+                    alert('El año que has introducido se nos sale de nuestro rango...');
+            }
+        } else {
+            estado = false;
+            alert('Error en la entrada');
+        }
     </script>
 
 </body>
