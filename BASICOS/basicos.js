@@ -1,0 +1,1 @@
+console.log('Hola desde la consola'); //Nos Permite visualizar en consola cualquier cosa
