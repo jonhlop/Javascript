@@ -12,17 +12,63 @@
         // contar mil numeros empezando por el 1 y que solo aparezcan los pares
         var inicio = parseInt(prompt('Valor inicial'));
         var fin = parseInt(prompt('Valor Final'));
+        var tipo = prompt('Par o impar');
+        tipo = tipo.toLowerCase();
 
-        var aux = 0;
 
-        for (i = inicio; i <= fin && fin <= 1000; i++) {
+        var auxp = 0, auxi = 0;
+        if ((tipo == "par") || (tipo == "impar")) {
+            for (i = inicio; i <= fin && fin <= 1000; i++) {
 
-            if (i % 2 == 0) {
-                console.log(i);
-                aux++;
+                if (i % 2 == 0 && tipo == 'par') {
+                    console.log(i);
+                    auxp++;
+                } else if (i % 2 != 0 && tipo == 'impar') {
+                    console.log(i);
+                    auxi++;
+                }
             }
+
+            console.log('Pares: ' + auxp);
+            console.log('imPares: ' + auxi);
+
+        } else {
+            alert('Valor erroneo ')
         }
-        console.log('Pares: ' + aux);
+
+        /*  otra forma
+        <script>
+//contar 1000 numeros empezando obligatoriamente por 1
+//pero solo quiero que aparezcan los pares.
+
+    var inicio = parseInt(prompt('Tu valor inicial:'));
+    var fin = parseInt(prompt('Tu valor final:'));
+
+    var tipo = prompt('¿Par o impar? Escribe lo que quieras que te muestre...');
+    tipo=tipo.toLowerCase();
+
+    var auxp=0, auxi=0;
+
+    while ((tipo != "par") && (tipo != "impar")){
+        tipo = prompt('¿Par o impar? Escribe lo que quieras que te muestre...');
+    }
+
+    for (i=inicio; i<=fin && fin<=1000; i++){
+        if(i%2 == 0 && tipo == "par"){
+            console.log(i);
+            auxp++;
+        }
+
+        else if(i%2 != 0 && tipo == "impar"){
+            console.log(i);
+            auxi++;
+        }
+    }
+        console.log('Pares:'+auxp);
+        console.log('Impares:'+auxi);
+
+*/
+
     </script>
 
 </body>

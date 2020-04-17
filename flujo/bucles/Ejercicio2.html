@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+
+    <script>
+        var primerColor = prompt('Dame el color para el primer cuadradro:');
+        var segundoColor = prompt('Dame el color para el segundo cuadradro:');
+
+
+        var numeroCuadrados = parseInt(prompt('Introduce el numero de cuadrados'));
+        var lado = prompt('Introduce el tamaño de cuadrados');
+
+
+        for (var i = 1; i <= numeroCuadrados; i++) {
+            var color = (i % 2 == 0) ? primerColor : segundoColor; //condicional ternario
+            document.write('<div style="background-color:' + color + '; width:' + lado + 'px; height:' + lado + 'px;">Cuadrado </div>')
+
+        }
+
+        /* OPERADORES CONDICIONALES TERNARIOS
+         var a = 11;
+    var numberLiteral = a == 5 ? 'Five' :
+                    a == 7 ? 'Seven' :
+                    a == 11 ? 'Eleven' :
+                    a == 15 ? 'Fifteen' :
+                    'Other Number';
+
+    console.log( numberLiteral ); // Eleven
+        console.log( dynamic ); // true
+var miEdad = 24;
+var mayorEdad = (miEdad > 18) ? “Sí, eres mayor de edad” : “No, sigue intentando”;
+0-18 18-21  21-50 50-100 100-...
+
+        */
+
+        //var cuadrados = '<div style="background-color:green; width:100px; height:100px;">Cuadrado </div>';
+        //document.write(cuadrados);
+
+
+
+    </script>
+</body>
+
+</html>
