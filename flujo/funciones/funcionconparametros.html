@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcioon que recibe parametros</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // los parametros pueden ser obligatorios u obtativos y son obligatorios y no los paso recibire undefined
+
+        //Puedo recibir uno o varios parametros de cualquier tipo. IMPORTANTE primero todos los parametros obligatorios
+        //y luego todos los optativos, para optativo ="asf"
+
+        function saludar(pNombre, pApellido = "rodriguez") {
+            document.write('<h1>HOLA ' + pNombre + ' ' + pApellido + '</h1>');
+        }
+
+        saludar('jonh', 'lope');
+        saludar('juan');
+
+    </script>
+</body>
+
+</html>

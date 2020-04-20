@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //Funcion que me pinte por pantalla un circulo que reciba por parametro el radio ancho y el color si no le paso color que lo ponga en green
+
+
+        function pintarCirculo(pAlto, pAncho, pColor = "green") {
+            document.write('<div style="background-color: ' + pColor + '; width: ' + pAncho + 'px; height: ' + pAlto + 'px; border-radius: 50%;"></div>');
+        }
+
+        pintarCirculo(100, 100, 'red');
+
+    </script>
+</body>
+
+</html>
