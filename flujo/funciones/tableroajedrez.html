@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablero ajedrez</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
-
 
 
     <script>
@@ -17,7 +19,33 @@
         //tamaño y luego cuantas casillas
         //pitar un cuadrado, pintar una fila, conseguir un tablero
 
+        //Datos
+        var tamaño = parseFloat(prompt('Introduce el tamaño de los cuadrados'));
+        var casillas = parseFloat(prompt('Cuantas casillas quieres?'));
 
+        var cuadrados = casillas * casillas;
+
+
+        function pintarCuadrados(pTamaño, pCasillas) {
+            let primerColor = "black";
+            let segundoColor = "Grey";
+            var altura = parseFloat(cuadrados / casillas);
+            altura = altura * tamaño;
+
+
+            document.write('<div class="container" style="width:' + altura + 'px; height:' + altura + '% ; display:flex; flex-wrap:wrap ">');
+            for (var i = 1; i <= cuadrados; i++) {
+                var color = (i % 2 == 0) ? primerColor : segundoColor; //condicional ternario
+                document.write('<div style="background-color:' + color + '; width:' + pTamaño + 'px; height:' + pTamaño + 'px; flex-wrap:wrap"></div>');
+            }
+            document.write('</div>');
+
+
+        }
+
+
+
+        pintarCuadrados(tamaño, casillas);
 
     </script>
 </body>
