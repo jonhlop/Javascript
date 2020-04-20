@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <script>
+        //realizar un programa que me permita recibir 2 numeros cualquiera y me pregunte el tipo de operacion que quiero realizar
+        //pondra el resultado en pantalla, "la suma de xe y es z"
+
+
+
+        function sumar(pNumero1, pNumero2) {
+            let resultado = pNumero1 + pNumero2;
+            return resultado;
+        }
+        function restar(pNumero1, pNumero2) {
+            let resultado = pNumero1 - pNumero2;
+            return resultado;
+        }
+
+        function multiplicar(pNumero1, pNumero2) {
+            let resultado = pNumero1 * pNumero2;
+            return resultado;
+        }
+        function division(pNumero1, pNumero2) {
+            let resultado = pNumero1 / pNumero2;
+            return resultado;
+        }
+        function potencia(pNumero1, pNumero2) {
+            let resultado = pNumero1 ** pNumero2;
+            return resultado;
+        }
+        do {
+            var operacion = prompt('Suma resta o multiplicacion division o potencia').toLowerCase();
+        }
+        while (operacion != "suma" && operacion != "resta" && operacion != "multiplicacion" && operacion != "division" && operacion != "potencia");
+        var pNumero1 = parseFloat(prompt('Introduce numero 1'));
+        var pNumero2 = parseFloat(prompt('Introduce numero 2'));
+
+        if (operacion == "suma") {
+            solucion = sumar(pNumero1, pNumero2);
+            document.write('<h1>El resultado de la suma es:' + solucion + ' </h1>');
+
+        } else if (operacion == "resta") {
+            solucion = restar(pNumero1, pNumero2);
+            document.write('<h1>El resultado de la resta es: ' + solucion + '</h1>');
+
+        } else if (operacion == "multiplicacion") {
+            solucion = multiplicar(pNumero1, pNumero2);
+            document.write('<h1>El resultado de la multiplicacion es: ' + solucion + '</h1>');
+        } else if (operacion == "division") {
+            solucion = division(pNumero1, pNumero2);
+            document.write('<h1>El resultado de la division es: ' + solucion + '</h1>');
+        } else if (operacion == "potencia") {
+            solucion = potencia(pNumero1, pNumero2);
+            document.write('<h1>El resultado de la potencia es: ' + solucion + '</h1>');
+        } else {
+            alert('No tenemos esa operacion');
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

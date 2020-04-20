@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones arrow</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        //Funcion flecha o arrow es una funcion anonima REalmente se creo para que el desarrollo escribiera menos 
+        const paridad = function (pNumero) {
+            //voy hacer un
+            let resultado = "impar";
+            if (pNumero % 2 == 0) {
+                resultado = "par";
+            }
+            return resultado;
+        }
+
+        //transformar una funcion anonima a funcion flecha
+
+        //paso 1: quito la palabra function y la sutituyo por una flecha despues de los parentesis=>
+        //paso 2: solo si la funcion recibe mas de un parametro necesito parentesis
+        //paso 3:si la funcion solo ejecuta un return puedo quitar el return y las {}
+
+        const otraparidad = pNumero => {
+
+            let resultado = "impar";
+            if (pNumero % 2 == 0) {
+                resultado = "par";
+            }
+            return resultado;
+        }
+        //funcion anonima
+        const sumar = function (pNumero1, pNumero2) {
+            return pNumero1 + pNumero2
+        }
+
+
+        //funcion flecha
+        //const sumita = function (pNumero1, pNumero2) => pNumero1 + pNumero2;
+
+    </script>
+</body>
+
+</html>

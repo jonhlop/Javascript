@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ees">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionanonima</title>
+</head>
+
+<body>
+
+
+    <script>
+        //funcion para saber si un numero es par o impar
+        var numero = 4;
+
+        const paridad = function (pNumero) {
+            //voy hacer un
+            let resultado = "impar";
+            if (pNumero % 2 == 0) {
+                resultado = "par";
+            }
+            return resultado;
+        }
+
+        var dimepar = paridad(numero);
+
+        document.write(dimepar);
+    </script>
+
+</body>
+
+</html>

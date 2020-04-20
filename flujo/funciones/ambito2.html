@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Ambito ES6 let y su ambito</title>
+</head>
+
+<body>
+
+
+    <script>
+        //let es global siempre que se cree fuera de toda estructura de flujo
+        let nombre = "juan"; //global
+        const PI = 3.14 //global
+
+        if (nombre == 'juan') {
+            let apellido = "perez"; //local
+            const edad = 25;//local
+        }
+
+
+    </script>
+
+</body>
+
+</html>

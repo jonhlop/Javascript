@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pardidad</title>
+</head>
+
+<body>
+
+
+    <script>
+        //calcularPVP(10,0.30,21%)
+        // Hacer una aplicacion que me permita calcular y sacar por pantalla el PVP de un producto. Recibiendo por pantalla exclusivamente el precio de proveedor
+
+        //pvp = precio +%margen + IVA
+
+        const pvp = function (pProveedor, pMargen, pImpuesto) {
+            let miMargen = margen(pProveedor, pMargen);
+            let iva = iva(pProveedor, miMargen, pImpuesto);
+            let preciofinal = pProveedor + pMargen + pImpuesto
+            document.write()
+        }
+        const margen = function (pPrecio, pMargenporcentaje) {
+            return pPrecio * (pMargenporcentaje / 100)
+        }
+
+        const iva = function (pPrecio, pMargenfinal, pImpuestofinal) {
+            let precioTotal = pPrecio + pMargenfinal;
+            return precioTotal * (pImpuestofinal / 100);
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de funciones</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //necesito una aplicacion que me permita controlar el stock del producto que tengo en tienda. para ello necesito saber cuanto stock total tengo
+        //necesito poder añadir nuevo producto cuando me falte stock, la aplicacion debera controlar el stock disponible avisandome de comprar cuando sea menos de 5.
+
+        //donde almacenamos el stock
+        var stock = 125;
+        // crear funcion que nos muestre el stock
+
+        function mostrarstock() {
+            console.log('mi stock es: ' + stock);
+        }
+        //añadir stock
+        function addstock(pCantidad) {
+            stock += pCantidad;//stock =stock + pcantidad
+            mostrarstock();
+        }
+
+        //vender producto
+        function venderProducto(pCantidad) { //cantidad respecto al usuario final
+
+            if (pCantidad > stock) {
+                console.log('No hay suficiente producto, solo puedes comprar un maximo de ' + stock);
+            } else {
+                stock -= pCantidad;
+                compobraStock();
+            }
+
+        }
+
+        //comprobarstock comprueba la cantidad de producto una vez se ha realizado la venta y lanza un mensaje al sministrador en funcion de la necesidad
+        //
+        function compobraStock() {
+            const STOCK_MINIMO = 5;
+            if (stock >= 0 && stock < STOCK_MINIMO) {
+                console.log('Te queda menos de ' + stock + ' en stock');
+                var quieresComprar = prompt('Quieres comprar? si o no').toLowerCase();
+            }
+
+            if (quieresComprar != "" && quieresComprar != "no") {
+                do {
+                    var cantidad = parseInt(prompt('Dime cuanta cantidad quieres en numero').toLowerCase());
+                } while (isNaN(cantidad));
+
+                addstock(cantidad);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
