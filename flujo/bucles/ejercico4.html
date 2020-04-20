@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio bucles cuadrados o ciruclos</title>
+    <style>
+        .circulo {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .cuadrado {
+            border-radius: 0%;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    <div class='circulo' style="background-color:  tomato; margin-left: 0px;"></div>
+-->
+
+    <script>
+        //Hacer un script que me permita elegir entre cuadrado y circulo, y asignarle un color al poligono elegido.
+        //Posteriormente colocare segun la cantidad de poligonos elegidos, las figuras en escalera 
+        do {
+            var poligono = prompt('Dime un poligono, Cuadrado o circulo').toLowerCase();
+        } while (poligono != 'cuadrado' && poligono != 'circulo');
+
+        var cantidad = parseInt(prompt('Dime una cantidad de poligonos'));
+        var color = prompt('Dame un color ingles').toLowerCase();
+
+        for (var i = 0; i < cantidad; i++) {
+            var distancia = i * 100;
+            document.write(' <div class=' + poligono + ' style="background-color:  ' + color + '; margin-left: ' + distancia + 'px;"></div>');
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

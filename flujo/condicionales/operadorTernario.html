@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional simple</title>
+</head>
+
+<body>
+
+    <script>
+        var nota = parseFloat(prompt('Introduce tu nota'));
+        /*
+                if (nota >= 5 && nota <= 10) {
+                    alert('has aprobado');
+        
+                } else {
+                    alert('Has suspendio');
+                }
+        */
+        //opcion 2 buscar la condicon mas restrictiva
+        if (nota >= 0 && nota <= 5) {
+            alert('has suspendido');
+
+        } else {
+            alert('Has aprobado');
+        }
+
+        var otromensaje = (nota >= 0 && nota > 5) ?
+            "Suspenso" : "aprobado";
+        alert(otromensaje);
+
+    </script>
+
+</body>
+
+</html>
