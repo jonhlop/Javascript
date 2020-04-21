@@ -20,32 +20,45 @@
         //pitar un cuadrado, pintar una fila, conseguir un tablero
 
         //Datos
-        var tamaño = parseFloat(prompt('Introduce el tamaño de los cuadrados'));
-        var casillas = parseFloat(prompt('Cuantas casillas quieres?'));
+        function pintarCasila(pTamano, pColor) {
+            let casilla = '<div style="background-color:' + pColor + '; width:' + pTamano + 'px; height:' + pTamano + 'px; "></div>'
+            return casilla;
+        }
 
-        var cuadrados = casillas * casillas;
+        function pintarFila(pNumeroCasillas, pTamano, pColorInicio) {
+            let anchoFila = pTamano * pNumeroCasillas;
+            let fila = '<div style="display:flex; max-width:' + anchoFila + 'px"> ';
+
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+                let color = "";
+                if (pColorInicio == 'lightgrey') {
+                    color = (i % 2 == 0) ? 'black' : pColorInicio;
+                } else {
+                    color = (i % 2 != 0) ? pColorInicio : 'lightgrey';
+                }
 
 
-        function pintarCuadrados(pTamaño, pCasillas) {
-            let primerColor = "black";
-            let segundoColor = "Grey";
-            var altura = parseFloat(cuadrados / casillas);
-            altura = altura * tamaño;
+                fila += pintarCasila(pTamano, color);
 
 
-            document.write('<div class="container" style="width:' + altura + 'px; height:' + altura + '% ; display:flex; flex-wrap:wrap ">');
-            for (var i = 1; i <= cuadrados; i++) {
-                var color = (i % 2 == 0) ? primerColor : segundoColor; //condicional ternario
-                document.write('<div style="background-color:' + color + '; width:' + pTamaño + 'px; height:' + pTamaño + 'px; flex-wrap:wrap"></div>');
             }
-            document.write('</div>');
+            fila += '</div>';
+            document.write(fila);
+        }
 
+        function crearTablero(pNumeroCasillas, pTamano) {
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+                let colorInicial = (i % 2 == 0) ? 'black' : 'lightgrey'
+                pintarFila(pNumeroCasillas, pTamano, colorInicial);
+
+            }
 
         }
 
+        var tamanoCasilla = parseInt(prompt('Dime un tamaño de la casilla'));
+        var numeroCasillas = parseInt(prompt('Dime un numero de casillas'));
 
-
-        pintarCuadrados(tamaño, casillas);
+        crearTablero(numeroCasillas, tamanoCasilla);
 
     </script>
 </body>
