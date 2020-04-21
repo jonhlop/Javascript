@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array multidimensional json -API</title>
+</head>
+
+<body>
+
+    <script>
+
+        const listaAlumnos = new Array(
+            {
+                nombre: "Juan",
+                apellido: "Perez",
+                edad: 38,
+                notamedia: 10,
+            },
+            {
+                nombre: "Alex",
+                apellido: "Rodriguez",
+                edad: 24,
+                notamedia: 7.5,
+            },
+            {
+                nombre: "Paloma",
+                apellido: "lopez",
+                edad: 18,
+                notamedia: 9,
+            },
+            {
+                nombre: "Ivan",
+                apellido: "otero",
+                edad: 26,
+                notamedia: 4,
+            },
+        )
+        console.log(listaAlumnos);
+
+
+        for (alumno of listaAlumnos) {
+            let divAlumno = ` <div>
+        <h2>${alumno.nombre} ${alumno.apellido}</h2>
+        <ul>
+            <li>Edad: ${alumno.edad}</li>
+            <li>Nota: ${alumno.notamedia}</li>
+        </ul>
+           </div>
+                    `;
+            document.write(divAlumno);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

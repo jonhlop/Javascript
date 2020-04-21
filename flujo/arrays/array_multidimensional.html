@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array multidimensional</title>
+</head>
+
+<body>
+
+    <script>
+        var zoo = new Array();
+
+        const aves = new Array('Aguila', 'Guacamayo', 'Periquito');
+        const felinos = new Array('Tigre', 'Leon', 'Pantera', 'Leopardo');
+        const anfibios = new Array('Hipopotamo', 'Rana', 'Cocodrilo');
+
+        zoo = [aves, anfibios, felinos];
+
+        console.log(zoo);
+        //opcion 1 para recorrer array de arrays
+
+        for (let i = 0; i < zoo.length; i++) {
+            for (let j = 0; j < zoo[i].length; j++) {
+                console.log(zoo[i][j])
+
+            }
+
+        }
+        //opcion2 forof
+        var contador = 1;
+        for (especie of zoo) {
+            for (animal of especie) {
+                document.write('<p>' + contador + '.' + animal + '</p>')
+                contador++;
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

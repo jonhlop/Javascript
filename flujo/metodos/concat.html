@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concat</title>
+</head>
+
+<body>
+
+    <script>
+
+        //me sirve para concatenar dos o mas arrays
+
+        const verduras = new Array('lechuga', 'pimientos', 'guisantes');
+        const carnes = new Array('Pollo', 'ternera');
+        const pescados = new Array('lubina', 'merluza');
+
+        //opcion 1
+        var listaCompra = new Array();
+        listaCompra = carnes.concat(pescados, verduras);
+
+        //opcion 2
+        var otraLista = new Array();
+        otraLista = carnes.concat(pescados).concat(verduras);
+    </script>
+</body>
+
+</html>

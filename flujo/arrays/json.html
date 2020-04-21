@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object Notation</title>
+</head>
+
+<body>
+
+    <script>
+
+        //json es equivalente a lo que conocemos como array asociativo, en el array asociativo, desaperece el concepto de posicion por el concepto de clave.
+
+        const producto = {
+            titulo: "Leche desnadata",
+            precio: 0.80,
+            capacidad: 1,
+            stock: true,
+        }
+        console.log(producto)
+
+        //como acceder 
+        //opcion 1 nomenclatura e corchete
+        console.log(producto['titulo']);
+        //concatenar
+        document.write(producto['titulo'] + ":" + producto['precio']);
+
+        document.write(producto['precio'] * 10)
+
+        //opcion 2 nomenclatura de punto objeto.atributo
+
+        console.log(producto.precio + ": " + producto.titulo)
+
+        producto.fechaCaducidad = '14/03/2021';
+
+        console.log(producto)
+
+        //para recorrer un json no tenemos la posibilidad de acceder a posicion
+        //opcion1  for in
+        for (clave in producto) {
+            document.write(clave + ": " + producto[clave] + '<br>');
+
+        }
+
+    </script>
+</body>
+
+</html>

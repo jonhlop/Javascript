@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexof </title>
+</head>
+
+<body>
+
+    <script>
+        //busca un elemennto dentro de un array y te devuelve la posicion de dicho elemento en la lista: indexof solo es par aarrays simples.
+        //si no encuentra el valor me devuelve -1
+        const listaAnimales = new Array('Perro', 'Gato', 'periquito', 'Aguila', 'hipopotamo');
+
+        var animalBuscar = "Gato";
+        var posicion = listaAnimales.indexOf(animalBuscar);
+
+        console.log(posicion);
+
+        //variante indexof para listas de objetos.
+        var listaAlumnos = new Array(
+            {
+                nomre: "Juan",
+                edad: 38
+            },
+            {
+                nomre: "Lucia",
+                edad: 40
+            },
+            {
+                nomre: "David",
+                edad: 39
+            },
+            {
+                nomre: 'Teresa',
+                edad: 45
+            },
+        )
+
+        var nombreBuscar = "Teresa";
+
+        //findindex me devuelve la posisicion y -1 si no lo encuentra. Tendremos que trabajar con el concepto de condicion. CAllback de condicion.
+
+        var posicionBuscada = listaAlumnos.findIndex(function (alumno) {
+            return alumno.nombre == nombreBuscar;
+        })
+
+        console.log(posicionBuscada);
+
+
+    </script>
+</body>
+
+</html>

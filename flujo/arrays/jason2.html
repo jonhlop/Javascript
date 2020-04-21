@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object Notation</title>
+</head>
+
+<body>
+
+
+    <script>
+        const alumno = {
+            nombre: 'Jonh',
+            apellido: 'Lopez',
+            edad: '38',
+            sexo: 'Masculino',
+            matricula: 'A123456',
+            estado: false,
+            notas: [3, 10, 5],
+            profesores: {
+                matematicas: 'Don pepe',
+                lengua: 'Doña Rosa',
+                Ingles: 'Mrs Hamilton'
+            },
+            mostrarNotaMedia: function () {
+                let suma = 0;
+                for (nota of this.notas) {
+                    suma += nota;
+                }
+                let resultado = suma / this.notas.length;
+                return resultado;
+            }
+        }
+        console.log(alumno.nombre); //juan
+        console.log(alumno.sexo); //masculino
+
+        console.log(alumno.notas[1]);//10
+        console.log(alumno.profesores.matematicas);//don pepe
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Crear una lista de prodcutos tendra productos con la siguiente informacion
+        //nombre, precio y cantidad y categoria.
+        //creare un array vacio para introducir en esa lista productos de la misma categoria
+        //papeleria limpieza y comida
+        //10 productos
+        //Tengo que reunir en un array de papeleria todos los productos de papeleria que sean de papeleria 
+
+        const productos = new Array(
+            {
+                nombre: "boligrafo",
+                precio: 0.50,
+                cantidad: 2,
+                categoria: "papeleria",
+            },
+            {
+                nombre: "ternera",
+                precio: 5,
+                cantidad: 30,
+                categoria: "Comida",
+            },
+            {
+                nombre: "cuaderno",
+                precio: 1.50,
+                cantidad: 4,
+                categoria: "papeleria",
+            },
+            {
+                nombre: "chorizo",
+                precio: 0.50,
+                cantidad: 2,
+                categoria: "Comida",
+            },
+            {
+                nombre: "lejia",
+                precio: 3,
+                cantidad: 20,
+                categoria: "Limpieza",
+            },
+            {
+                nombre: "estropajo",
+                precio: 0.50,
+                cantidad: 13,
+                categoria: "Limpieza",
+            },
+            {
+                nombre: "Rotulador",
+                precio: 0.50,
+                cantidad: 20,
+                categoria: "papeleria",
+            },
+            {
+                nombre: "pescado",
+                precio: 2.50,
+                cantidad: 2,
+                categoria: "Comida",
+            },
+            {
+                nombre: "pan",
+                precio: 1,
+                cantidad: 32,
+                categoria: "Comida",
+            },
+            {
+                nombre: "jabon",
+                precio: 0.50,
+                cantidad: 2,
+                categoria: "Limpieza",
+            },
+
+        )
+
+        var papeleria = new Array();
+        var limpieza = new Array();
+
+        function separarArray(pCategoria, pLista) {
+            let listaFiltrada = new Array();
+
+            for (producto of pLista) {
+                if (producto.categoria == pCategoria) {
+
+                    listaFiltrada.push(producto);
+                    //splice elima un elemento de la lista principal dos parametros posicion del prodcuto segundo parametro la cantidad de productos
+                    posicion = pLista.finIndex(producto => producto.categoria == pCategoria);
+                    pLista.splice(posicion, 1);
+                }
+
+            }
+            return listaFiltrada;
+
+        }
+
+        papeleria = separarArray('papeleria', productos);
+        papeleria = separarArray('limpieza', productos);
+
+
+
+    </script>
+</body>
+
+</html>

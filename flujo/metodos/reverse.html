@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse</title>
+</head>
+
+<body>
+
+    <script>
+        //invierte el array modificando el array principal
+        const listaAnimales = new Array('Perro', 'Gato', 'periquito', 'Aguila', 'hipopotamo');
+
+        var listainvertida = new Array();
+        // listainvertida = listaAnimales.reverse();
+        //console.log(listainvertida)
+
+        //spread operatos
+
+        var otralistainvertida = new Array();
+        otralistainvertida = [...listaAnimales].reverse();
+        console.log(otralistainvertida)
+        console.log(listaAnimales)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Simple</title>
+</head>
+
+<body>
+
+
+    <script>
+        const listaAlumnos = new Array('Elias', 'Ana', 'Tony', 'Javier', 'Paloma');
+
+        //sacar longitud de una lista
+        console.log(listaAlumnos.length);
+        //sacar un elemento de una lista tengo que saber que las listas se numeros de 0 a n-1 siendo n la length del array
+        console.log(listaAlumnos[2]); //tony
+
+        //Vamos a pintar todo esto en una lista no numerada en html
+        function pintarLista(pListaAlumnos) {
+            let listaHTML = '<ul>';
+            for (let i = 0; i < pListaAlumnos.length; i++) {
+                let color = (i % 2 == 0) ? "green" : "red";
+                //concateno lis
+                listaHTML += '<li style="color: ' + color + '">' + pListaAlumnos[i] + '</li>';
+            }
+            listaHTML += '</ul>';
+
+            document.write(listaHTML);
+        }
+
+        pintarLista(listaAlumnos);
+
+        //empezando por color rojo pintar los elemento rojo verde hasta el final del texto
+
+    </script>
+</body>
+
+</html>
