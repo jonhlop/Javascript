@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media aritmetica</title>
+</head>
+
+<body>
+
+
+    <script>
+        //mediaaritmetica de varios numeros
+
+        media(2, 3, 4); //3
+        media(8, 2, 3, 2, 3)
+        media(10, 10, 10, 10, 5, 5, 20, 10)
+
+        function media() {
+            let suma = 0;
+            let mediaaritmetica = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                suma += arguments[i];
+
+            }
+            mediaaritmetica = suma / arguments.length;
+            document.write('<p>' + mediaaritmetica + '</p>');
+        }
+
+    </script>
+</body>
+
+</html>

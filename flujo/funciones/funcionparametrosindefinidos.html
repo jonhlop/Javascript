@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion parametros indefinidos</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //Funciones de parametros indefinidos, 
+        //1 - Son funciones que no reciben ningun parametro, la razon es, que si le pasamos parametros le estamos dando parametros DEFINIDOS.
+        //2 - Utilizaremos la propiedad arguments, dicha propiedad me dice cuantos argumentos me envian, cualitativamente y cuantivamente
+        //3 - 
+        function sumar() {
+            let suma = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                suma = suma + arguments[i];//suma+=arguments[1]
+            }
+            document.write('<p>' + suma + '</p>');
+        }
+
+        sumar(2, 5);
+        sumar(3, 4, 5);
+        sumar(5, 46, 34, 22, 5, 4);
+
+
+
+
+    </script>
+</body>
+
+</html>
