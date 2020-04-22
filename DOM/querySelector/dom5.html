@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 5</title>
+</head>
+
+<body>
+
+    <section id="servicios">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus beatae illo aliquid nulla explicabo,
+            nobis dolore consequatur recusandae, atque magnam amet. Et, fuga minima. Maiores dolorum praesentium
+            temporibus iusto facere.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ad quo nemo nulla dolores quasi ex assumenda
+            ipsa, quas rerum vel ipsam fugit consequatur repudiandae amet atque repellendus deserunt architecto.</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quod atque quasi quam provident voluptatem eius
+            a tempore temporibus illo, hic qui, cumque repudiandae adipisci excepturi culpa officia, aliquid eos!</p>
+    </section>
+    <section>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus beatae illo aliquid nulla explicabo,
+            nobis dolore consequatur recusandae, atque magnam amet. Et, fuga minima. Maiores dolorum praesentium
+            temporibus iusto facere.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ad quo nemo nulla dolores quasi ex assumenda
+            ipsa, quas rerum vel ipsam fugit consequatur repudiandae amet atque repellendus deserunt architecto.</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quod atque quasi quam provident voluptatem eius
+            a tempore temporibus illo, hic qui, cumque repudiandae adipisci excepturi culpa officia, aliquid eos!</p>
+    </section>
+
+    <script>
+        //Todos los parrafos de la seccion servicios quiero modificarle el texto sustituyendolo por un numbre y un numero correlativo
+
+        //p Juan 1
+        //
+
+        var parrafos = document.querySelectorAll('#servicios p');//accede a el id 
+        for (let i = 0; i < parrafos.length; i++) {
+            parrafos[i].innerText = 'jonh' + i;
+        }
+
+    </script>
+</body>
+
+</html>

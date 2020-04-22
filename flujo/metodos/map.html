@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion map</title>
+</head>
+
+<body>
+
+    <script>
+        //map crea un array nuevo cuyo resultado es el array de origen que se le ha realizadao un mapeo de datos siguiendo una condicion.
+
+        var listaNumeros = new Array(1, 5, 7, 4, 9)
+
+        var listaDobles = new Array();
+
+        listaDobles = listaNumeros.map(function (numero) {
+            return numero * 2
+
+        })
+
+        console.log(listaDobles)
+
+    </script>
+</body>
+
+</html>

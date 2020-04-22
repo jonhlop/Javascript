@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear elementos dinamicamente</title>
+</head>
+
+<body>
+    <section id="equipos">
+        <!--  <article>
+            <h3>Nombre Equipo</h3>
+            <p>Ciudad: Madrid</p>
+        </article> -->
+    </section>
+    <script>
+        var equipos = document.getElementById('equipos');
+        function pintarEquipos(pNombre, pCiudad) {
+            //creo article
+            let article = document.createElement('article');
+            article.style.width = "200px";
+            article.id = pCiudad.toLowerCase()
+
+
+            //creo el contenido de article
+            let h3 = document.createElement('h3');
+            let nombreEquipo = document.createTextNode(pNombre);
+            h3.appendChild(nombreEquipo);
+            h3.style.backgroundColor = "tomato";
+            h3.style.padding = "10px"
+            let p = document.createElement('p');
+            let ciudad = document.createTextNode('Ciudad: ' + pCiudad);
+            p.appendChild(ciudad);
+            p.style.textAlign = 'center'
+            article.appendChild(h3);
+            article.appendChild(p);
+
+            equipos.appendChild(article);
+
+        }
+
+        function borrarEquipo(pId) {
+            let equipoBorrar = document.getElementById(pId);
+            //para borrar
+            equipoBorrar.parentNode.removeChild(equipoBorrar);
+
+        }
+
+
+    </script>
+</body>
+
+</html>

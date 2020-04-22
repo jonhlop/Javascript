@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data atributes</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin-bottom: 2px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li data-posicion="300px" class="cuadrado"></li>
+        <li data-posicion="200px" data-color="black" class="cuadrado"></li>
+        <li data-posicion="300px" class="cuadrado"></li>
+        <li data-posicion="200px" data-radio="50%" class="cuadrado"></li>
+    </ul>
+
+    <script>
+        var lis = document.getElementsByClassName('cuadrado');
+        /*
+                lis[1].dataset.posicion
+                lis[1].style.marginLeft = lis[1].dataset.posicion;
+        */
+        for (li of lis) {
+            var desplazamiento = li.dataset.posicion;
+            var color = li.dataset.color;
+            var radio = li.dataset.radio;
+            li.style.marginLeft = desplazamiento;
+            li.style.backgroundColor = color;
+            li.style.borderRadius = radio;
+
+        }
+    </script>
+</body>
+
+</html>

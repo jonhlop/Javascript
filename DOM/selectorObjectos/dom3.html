@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3</title>
+</head>
+
+<body>
+    <ul id="menu">
+
+    </ul>
+
+    <ul class="otromenu">
+        <li>Aviso legal</li>
+        <li>Cookies</li>
+    </ul>
+
+    <script>
+        var div = document.getElementById('menu');
+        div.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/rt9S-EUquyk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+        var uls = document.getElementsByClassName('otromenu');
+        var lis = uls[0].getElementsByTagName('li');
+        lis[0].innerText = "Jonh";
+
+    </script>
+</body>
+
+</html>

@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metodo find</title>
+    <title>Metodo filter</title>
 </head>
 
 <body>
 
     <script>
 
-        //Es un metodo de busqueda para listas de objetos. devuelve el primer elemento de la lista que cumple la condicion.
+        //Es un metodo que me permite buscar mas de un item dentro de la lista que cumpla la funcion de condicion
 
         var listaAlumnos = new Array(
             {
@@ -34,8 +34,18 @@
 
         var edadBusqueda = 38;
 
-        var alumno = listaAlumnos.find(alumno => alumno.edad == edadBusqueda);
-        console.log(alumno)
+        var listaFiltradaXedad = new Array();
+        listaFiltradaXedad = listaAlumnos.filter(function (alumno) {
+            return alumno.edad == edadBusqueda;
+
+        })
+        console.log(listaFiltradaXedad);
+
+        /*
+                listaFiltradaXedad = listaAlumnos.filter(alumno => alumno.edad == edadBusqueda);
+        */
+
+
     </script>
 </body>
 

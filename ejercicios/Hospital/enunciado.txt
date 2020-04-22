@@ -1,0 +1,12 @@
+Crear un listado que pueda contener un registro de pacientes cada paciente tendra los siguientes datos:
+nombre
+apellido
+edad
+diagnostico
+numeross
+
+15 pacientes
+
+1. Filtrar pacientes por rango de edad, es decir edad maxima y edad minima. 18-25 puede filtrar por dentro del rango y fuera del rango
+2. filtrar por enfermedad.
+3. quiero saber aquellos pacientes cuyo numero de la SS acabe en 0

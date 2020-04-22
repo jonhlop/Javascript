@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foreach</title>
+</head>
+
+<body>
+
+    <script>
+        var listaAlumnos = new Array(
+            {
+                nombre: "Juan",
+                edad: 38
+            },
+            {
+                nombre: "Lucia",
+                edad: 40
+            },
+            {
+                nombre: "David",
+                edad: 38
+            },
+            {
+                nombre: 'Teresa',
+                edad: 45
+            },
+        )
+
+        //es un bucle que me permite recorrer mi array, me permite librarme de bucles de for o while para pintar listas.
+
+        listaAlumnos.forEach(alumno =>
+            document.write(`<div>
+                    <h2>${alumno.nombre}</h2>
+                    <p>Edad: ${alumno.edad}</p>
+                </div>`)
+        )
+    </script>
+</body>
+
+</html>

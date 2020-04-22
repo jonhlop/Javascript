@@ -1,0 +1,12 @@
+// crear un listado que pueda contener un registro de pacientes, cada paciente tendrá los siguientes datos:
+// nombre, apellido, edad, diagnostico, numeroSS A23456
+
+//15 pacientes.
+
+//filtreis los pacientes por rango de edad, es decir por una edad maxima y minima, puede filtrar por dentro y fuera del ranto.
+
+
+//filtres por enfermedad.
+
+//quiero saber aquellos pacientes cuyo numero de la seguridad acabe en cero.
+

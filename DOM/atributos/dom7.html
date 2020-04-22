@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM7</title>
+</head>
+
+<body>
+    <div>
+        <img src="" alt="">
+
+    </div>
+
+    <script>
+        //quiero que os busqueis 3 imagenes del mismo tamaño
+        // crear una funcion que cada vez que sea llamada por consola me permita cambiar el src de la imagen por otra imagen cualquiera.
+
+
+        function cambiarImagen(pNumero) {
+            let img = document.querySelector('div img')
+            img.src = "img/imagen_" + pNumero + ".jpg";
+
+        }
+
+        var contador = 1;
+        cambiarImagen(contador)
+        var intervalo = setInterval(function () {
+            contador = (contador >= 3) ? 1 : contador + 1;
+            cambiarImagen(contador);
+        }, 2000)
+
+        //funciones intervalicas
+
+        //setTimeOut() que se le da una cantidad de segundos y tarda en ejecutarse dicha cantidad.
+        //setInterval()se repite la llamada a la funcion cada x segundos
+
+
+    </script>
+
+</body>
+
+</html>

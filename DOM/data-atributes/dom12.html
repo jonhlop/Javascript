@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 12</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam, fugit non accusamus eaque excepturi
+        culpa delectus eveniet pariatur unde vero ipsa, deleniti eos labore sequi saepe, eius architecto consequuntur?
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo asperiores nemo harum excepturi minima quidem,
+        deserunt, inventore itaque consequatur voluptatum distinctio nisi suscipit. Quos repellendus iusto suscipit
+        distinctio blanditiis exercitationem?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi deleniti voluptatum dolorem rem ea sunt quidem
+        aperiam unde, quo veritatis eius omnis ratione voluptate voluptates. Reiciendis nostrum cum id unde.</p>
+
+
+    <script>
+        var parrafos = document.querySelectorAll('p');
+        parrafos.forEach(function (parrafo) {
+            parrafo.dataset.color = "black";
+            parrafo.style.backgroundColor = parrafo.dataset.color;
+        })
+
+    </script>
+</body>
+
+</html>

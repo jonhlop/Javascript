@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Contacto</a></li>
+        <li><a href="">Galeria</a></li>
+    </ul>
+    <ul>
+        <li><a href="">Aviso legal</a></li>
+        <li><a href="">Cookies</a></li>
+
+    </ul>
+    <script>
+        const secciones = new Array('Inicio', 'Servicios', 'Equipo');
+
+        var uls = document.getElementsByTagName('ul');
+        var primerul = uls[0];
+        var enlaces = primerul.getElementsByTagName('a');
+
+        var i = 0;
+        for (enlace of enlaces) {
+            enlace.innerText = secciones[i];
+            i++;
+        }
+    </script>
+</body>
+
+</html>

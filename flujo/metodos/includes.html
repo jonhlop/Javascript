@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>includes</title>
+</head>
+
+<body>
+
+    <script>
+
+        //metodo que busca un elemento dentro de una array de cualquier tipo y me devuelve true o false
+
+        var listaAnimales = new Array('leon', 'gato', 'perro')
+        var animalBuscar = 'leon'
+
+        var busqueda = listaAnimales.includes(animalBuscar);
+
+        console.log(busqueda)
+
+        // para muchos efectos dentro de programacion un string es una cadena de caracteres 
+        var texto = "Estudiar Javascript";
+        console.log(texto.length);
+
+        var letraBuscar = "Ja";
+        var valor = texto.includes(letraBuscar);
+        console.log(valor)
+
+    </script>
+</body>
+
+</html>

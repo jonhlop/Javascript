@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 1</title>
+</head>
+
+<body>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nostrum commodi saepe asperiores ut dolores illum
+        repellendus quasi repellat, et incidunt, officiis tempore adipisci porro? Dignissimos debitis aperiam dolor
+        quis?</p>
+
+    <p><strong>Hola </strong> k ase</p>
+
+    <p>Hasta luego lucas¡¡</p>
+
+    <script>
+        var parrafos = document.getElementsByTagName('p');
+
+        console.log(parrafos[1].innerHTML);//Me sirve para leer como para sobreescribir
+        parrafos[1].innerHTML = '<ul><li>Jonh</li></ul>';
+        parrafos[2].innerText = "Sustituyo el texto por otro texto"
+    </script>
+</body>
+
+</html>

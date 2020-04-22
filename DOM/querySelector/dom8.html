@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 8</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam incidunt nulla officia molestiae. Ipsum, eius
+        ipsa! Possimus corrupti quos, excepturi dolore nemo velit eum cupiditate veritatis accusantium sequi saepe
+        quidem.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae neque vel distinctio, quae atque eveniet enim
+        itaque laudantium iure consequuntur consequatur alias expedita reprehenderit repellendus eius, eligendi nam?
+        Quas, ullam.</p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus illo animi molestias est rerum
+        deserunt sit hic cumque sapiente minima, repellat fuga numquam vel! Doloribus incidunt harum aut quam?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus illo animi molestias est rerum
+        deserunt sit hic cumque sapiente minima, repellat fuga numquam vel! Doloribus incidunt harum aut quam?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus illo animi molestias est rerum
+        deserunt sit hic cumque sapiente minima, repellat fuga numquam vel! Doloribus incidunt harum aut quam?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus illo animi molestias est rerum
+        deserunt sit hic cumque sapiente minima, repellat fuga numquam vel! Doloribus incidunt harum aut quam?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus illo animi molestias est rerum
+        deserunt sit hic cumque sapiente minima, repellat fuga numquam vel! Doloribus incidunt harum aut quam?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus illo animi molestias est rerum
+        deserunt sit hic cumque sapiente minima, repellat fuga numquam vel! Doloribus incidunt harum aut quam?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus illo animi molestias est rerum
+        deserunt sit hic cumque sapiente minima, repellat fuga numquam vel! Doloribus incidunt harum aut quam?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus illo animi molestias est rerum
+        deserunt sit hic cumque sapiente minima, repellat fuga numquam vel! Doloribus incidunt harum aut quam?
+    </p>
+
+    <script>
+        //modificar desde javascript lsos estilos de todos los p, los p impares van aparece con fondo negro texto blanco y un padding de 10px
+        //los pares solo van a tener un padding de 10px
+        var parrafos = document.getElementsByTagName('p');
+
+        contador = 0;
+        for (parrafo of parrafos) {
+            if (contador % 2 != 0) {
+                parrafo.style.backgroundColor = "black";
+                parrafo.style.color = "white";
+            }
+            parrafo.style.padding = "10px";
+            contador++;
+        }
+
+    </script>
+
+</body>
+
+</html>

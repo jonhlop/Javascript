@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color {
+            color: tomato;
+        }
+
+        .azul {
+            color: blue;
+        }
+
+        .parrafo {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="parrafo">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, deserunt voluptatem deleniti ad sapiente
+        velit aliquam nisi earum aperiam voluptas possimus tempore totam commodi temporibus, magni dolorum quae ut
+        numquam?
+    </p>
+    <p class="parrafo">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, deserunt voluptatem deleniti ad sapiente
+        velit aliquam nisi earum aperiam voluptas possimus tempore totam commodi temporibus, magni dolorum quae ut
+        numquam?
+    </p>
+    <script>
+        var parrafos = document.querySelectorAll('.parrafo');
+        parrafos[0].className += " color";
+
+        //classlist
+
+        console.log(parrafos[0].classList);
+
+        //classList.Item
+        console.log(parrafos[0].classList.item(1));//color
+
+        //borrar classList.remove
+        parrafos[0].classList.remove('color')
+        //añadir
+        parrafos[0].classList.add('azul')
+        //remplazar
+        parrafos[0].classList.replace('azul', 'color');
+
+        //cambiar un valor dependiendo del estado de una variable
+        var estado = true;
+        parrafos[1].classList.toggle('jonh', estado == true)
+
+
+    </script>
+</body>
+
+</html>
