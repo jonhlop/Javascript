@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de teclado</title>
+
+    <style>
+        .coche {
+            width: 150px;
+            height: 80px;
+            background-image: url(camaro.png);
+            background-size: cover;
+            transform: rotateZ(180deg);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        .bala {
+            width: 20px;
+            height: 7px;
+            background-color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="coche"></div>
+
+
+    <script>
+        //los eventos los lanza el document
+
+        document.addEventListener('keydown', capturaTecla);
+        var coche = document.querySelector('.coche');
+        var coorX = coche.offsetLeft;
+        var coorY = coche.offsetTop;
+        var avanceBala = 0;
+        var velocidad = 10;
+
+        //console.log(coorX, coorY);
+
+        function capturaTecla(event) {
+            let tecla = event.keyCode;
+
+            switch (tecla) {
+                case 37:
+                    //izquierda
+                    moverHorizontal((-1 * velocidad), 0);
+                    break;
+                case 38:
+                    //arriba
+                    moverVertical((-1 * velocidad), 90);
+                    break;
+                case 39:
+                    //derecha
+                    moverHorizontal(velocidad, 180);
+                    break;
+                case 40:
+                    //abajo
+                    moverVertical(velocidad, 270);
+                    break;
+                case 32:
+                    //disparar
+                    disparar();
+                    break;
+                case 78:
+                    velocidad = (velocidad == 10) ? 140 : 10;
+                    break;
+            }
+        }
+
+        function moverHorizontal(pDistancia, pGrados) {
+            coorX += pDistancia;
+            coche.style.left = coorX + "px";
+            coche.style.transform = 'rotateZ(' + pGrados + 'deg)';
+        }
+
+
+        function moverVertical(pDistancia, pGrados) {
+            coorY += pDistancia;
+            coche.style.top = coorY + 'px';
+            coche.style.transform = 'rotateZ(' + pGrados + 'deg)';
+        }
+
+
+        function disparar() {
+            let bala = document.createElement('div');
+            bala.className = "bala";
+            bala.style.left = (coche.offsetLeft + 100) + 'px';
+            bala.style.top = (coche.offsetTop + 40) + 'px';
+            document.body.appendChild(bala);
+
+            setInterval(function () {
+                avanceBala += 10;
+                bala.style.left = avanceBala + 'px';
+            }, 500)
+
+        }
+
+    </script>
+
+</body>
+
+</html>

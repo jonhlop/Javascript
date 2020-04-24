@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos inyectados </title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li data-color="blue">Blue</li>
+        <li data-color="tomato">Red</li>
+        <li data-color="Yellow">Yellow</li>
+    </ul>
+    <script>
+        //Cada vez que pulsemos en un li cambiar el fondo de color.
+        //listener son funciones que reciben dos parametros, primero es el tipo de evento sin la palabra On, y el segundo paramtero es la funcion o callback que captura el evento. IMPORTANTE : a este callback no se le puede ningun parametro.
+
+        var lis = document.querySelectorAll('#menu li');
+        for (li of lis) {
+            li.addEventListener('click', recogerColor);
+        }
+
+        function recogerColor(event) {
+
+            let color = event.target.dataset.color
+            document.body.style.backgroundColor = color;
+        }
+
+
+    </script>
+</body>
+
+</html>

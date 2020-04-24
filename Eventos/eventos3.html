@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .snake {
+            width: 50px;
+            height: 50px;
+            background-color: tomato;
+            transition: 0.5s;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- izquierda y derecha con inyectados -->
+    <button onclick="irIzquierda()">IZQUIERDA</button>
+    <button onclick="irDerecha()">DERECHA</button>
+
+    <!-- arriba y abajo -->
+    <button class="listeners">ARRIBA</button>
+    <button class="listeners">ABAJO</button>
+
+    <div class="snake">
+
+    </div>
+    <script>
+        //10px siempre hacia cualquier lado
+        //Pasos a seguir
+        //1- Identificar quien acciona el evento y capturarlo
+        //2- Sobre quien actua el evento y capturarlo
+        //3- tipo de evento
+        //4- crear una funcion que se lance al ejecutar el evento
+        //5- que parametros necesito y de donde los saco para hacer la accion
+
+        var snake = document.querySelector('.snake');
+        var avance = 0;
+        var avanceVertical = 0;
+        function irDerecha() {
+            avance += 10;
+            snake.style.marginLeft = avance + 'px';
+        }
+        function irIzquierda() {
+            avance -= 10;
+            snake.style.marginLeft = avance + 'px';
+        }
+
+        var botones = document.querySelectorAll('.listeners');
+        for (boton of botones) {
+            boton.addEventListener('click', moverVertical);
+
+        }
+
+        function moverVertical(event) {
+            let direccion = event.target.innerText;
+            switch (direccion) {
+                case 'ARRIBA':
+                    avanceVertical -= 10;
+                    break;
+                case 'ABAJO':
+                    avanceVertical += 10;
+                    break;
+            }
+            snake.style.transform = 'translateY(' + avanceVertical + 'px)'
+        }
+
+
+    </script>
+</body>
+
+</html>

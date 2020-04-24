@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos 4</title>
+</head>
+
+
+<body>
+
+    <button id="cuadrado">CUADRADO</button>
+    <button id="circulo">CIRCULO</button>
+    <div id="elemento">
+
+    </div>
+    <script>
+        //El ejercicio se debe desarrollar con listeners no podemos tocar nada del html
+        // si pulso en cuadrado el elemento se transformara en un cuadrado de 100px 100px en color rojo
+        // teneis que intentar pasar el parametro alto y ancho de alguna forma a la funcion para poder modificar a posteriori dicho alto y ancho
+        //lo mismo para el circulo sera un ciruclo
+
+        var btncuadrado = document.querySelector('#cuadrado');
+        var btncirculo = document.querySelector('#circulo');
+        var elemento = document.querySelector('#elemento');
+
+        btncuadrado.addEventListener('click', crearPoligono);
+        btncirculo.addEventListener('click', crearPoligono);
+
+        function crearPoligono() {
+            let poligono = event.target.id;
+            switch (poligono) {
+                case 'CUADRADO':
+                    element.style.cssText = ``
+                    elemento.style.width = '100px';
+                    elemento.style.height = '100px';
+                    elemento.style.backgroundColor = 'red';
+                    break;
+                case 'CIRCULO':
+                    elemento.style.width = '100px';
+                    elemento.style.height = '100px';
+                    elemento.style.borderRadius = '50 %';
+                    elemento.style.backgroundColor = 'blue';
+                    break;
+
+
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

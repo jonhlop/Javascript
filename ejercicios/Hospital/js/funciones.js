@@ -40,8 +40,8 @@ function filtrarXdiagnostico(pLista, pDiagnostico) {
 
 //vamos a combinar los dos filtros para obtener pacientes entre un rango de edad y enfermedad concreta
 
-var temporal = filtrarXdiagnostico(filtrarXedad(pacientes, 20, 40), 'Diabetes')
-console.log(temporal);
+/* var temporal = filtrarXdiagnostico(filtrarXedad(pacientes, 20, 40), 'Diabetes')
+console.log(temporal); */
 
 
 //quiero saber aquellos pacientes cuyo numero de la seguridad acabe en cero.
@@ -61,6 +61,6 @@ function filtrarXNumeroSS(pLista, pNumero) {
     return listaFiltrada;
 }
 
-var temporal2 = filtrarXNumeroSS(pacientes, 0);
+/* var temporal2 = filtrarXNumeroSS(pacientes, 0);
 console.log(temporal2);
-
+ */
