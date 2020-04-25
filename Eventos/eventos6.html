@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #miVentana {
+            position: fixed;
+            width: 350px;
+            height: 190px;
+            top: 0;
+            left: 0;
+            font-size: 12px;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            border: #3333 3px solid;
+            background-color: #fafafa;
+            color: black;
+            display: none;
+
+        }
+
+        #titulo {
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            padding: 5px;
+            background-color: lightblue;
+
+        }
+
+        #cerar {
+            padding: 10px;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 45px;
+        }
+    </style>
+    <script>
+        function mostrarVentana() {
+            var ventana = document.getElementById('miVentana');
+            ventana.style.marginTop = "100px";
+            ventana.style.marginLeft = ((document.body.clientWidth - 350) / 2) + "px";//saca la anchuda del navegador en ese momento
+
+            ventana.style.display = 'block'
+
+        }
+        function ocultarVentana() {
+            var ventana = document.getElementById('miVentana');
+
+            ventana.style.display = 'none';
+
+        }
+    </script>
+</head>
+
+<body>
+    prueba haciendo click <a href="javascript:mostrarVentana();"> aqui</a>
+    <div id="miVentana">
+        <div id="titulo">Titulo de la ventana</div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestiae omnis aspernatur laudantium animi,
+            recusandae esse eos atque, sed commodi cumque sit velit suscipit fuga consequuntur, doloremque alias ullam
+            quaerat!</p>
+
+        <div id="cerrar">
+            <input value="Aceptar" type="button" size="20" name="btnAceptar" id="btnAceptar"
+                onclick="ocultarVentana();">
+        </div>
+    </div>
+
+</body>
+
+</html>

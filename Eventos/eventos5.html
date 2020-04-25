@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator</title>
+</head>
+
+<body>
+    <div id="navegador"></div>
+    <script type="text/javascript">
+        texto = "<h2> Propiedades Navegador </h2>";
+        texto += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+        texto += "<p>Browser Name: " + navigator.appName + "</p>";
+        texto += "<p>Browser Version: " + navigator.appVersion + "</p>";
+        texto += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+        texto += "<p>Browser Language: " + navigator.language + "</p>";
+        texto += "<p>Browser Online: " + navigator.onLine + "</p>";
+        texto += "<p>Platform: " + navigator.platform + "</p>";
+        texto += "<p>User-agent header: " + navigator.userAgent + "</p>";
+        texto += "<p>geolocalizacion: " + navigator.geolocation + "</p>";
+        document.getElementById('navegador').innerHTML = texto;
+    </script>
+</body>
+
+</html>
