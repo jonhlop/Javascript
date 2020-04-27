@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cosa {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 0%;
+            cursor: pointer;
+            transition: 2s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <div id="cosa">
+
+        </div>
+    </section>
+
+    <script>
+        var cosa = document.getElementById('cosa');
+        cosa.addEventListener('click', cambiarforma);
+
+        function cambiarforma(event) {
+            event.target.style.borderRadius = '50%'// con event.target recoge lo que clicas
+        }
+
+    </script>
+</body>
+
+</html>

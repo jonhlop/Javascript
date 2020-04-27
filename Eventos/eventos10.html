@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+
+        }
+
+        .menu {
+            margin-top: 20px;
+        }
+
+        .menu li {
+            background-color: black;
+            padding: 10px;
+            color: white;
+            width: 100px;
+            text-align: right;
+            margin-bottom: 10px;
+            margin-left: -10px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li>Perro</li>
+        <li>Gato</li>
+        <li>Pajaro</li>
+    </ul>
+
+    <script>
+        var lis = document.querySelectorAll('.menu li');
+
+        for (li of lis) {
+            /*  li.addEventListener('mouseover', sacar);
+             li.addEventListener('mouseout', meter); */
+            li.addEventListener('mouseover', animar);
+            li.addEventListener('mouseout', animar);
+            li.addEventListener('click', cambiarImagen);
+        }
+
+        /*   function sacar(event) {
+              event.target.style.marginLeft = '0px';
+              event.target.style.transition = '1s'
+          }
+  
+  
+          function meter(e) {
+              event.target.style.marginLeft = '-20px';
+              event.target.style.transition = '1s'
+          }
+  
+           */
+        function animar(e) {
+            var margen = (e.type == "mouseover") ? 0 : -20;
+            event.target.style.marginLeft = margen + 'px';
+            event.target.style.transition = '1s'
+        }
+        function cambiarImagen(e) {
+            let img = e.target.innerText.toLowerCase();
+            let cuerpo = document.body;
+
+            cuerpo.style.backgroundImage = "url(img/" + img + ".jpg)"
+            cuerpo.style.backgroundSize = "cover";
+            cuerpo.style.backgroundRepeat = "no-repeat"
+        }
+    </script>
+</body>
+
+</html>
