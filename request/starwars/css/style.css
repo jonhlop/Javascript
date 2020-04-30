@@ -43,12 +43,43 @@ header #personajes li {
     font-weight: 700;
     padding: 10px;
 
+
 }
 
 
 header #personajes li:hover {
     color: black;
     background-color: #FFE919;
+}
+
+header .botones {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .botones div {
+    width: 50%;
+}
+
+
+
+
+header .botones div {
+    border: 1px solid #FFE919;
+    color: #FFE919;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    display: none;
+
+}
+
+header .botones div:hover {
+    border: 1px solid black;
+    color: black;
+    background-color: #FFE919;
+
+
 }
 
 main {
@@ -60,7 +91,7 @@ main #vistaPersonaje {
     padding: 20px;
     border: 1px solid black;
     width: 80vw;
-    height: 80vh;
+    height: auto;
 }
 
 main h2 {
@@ -79,13 +110,14 @@ main #vistaPersonaje .peliculas article {
     background-color: black;
     color: white;
     padding: 20px;
-    margin: 0 1.5%;
+    margin: 1.5%;
     border: 2px solid #FFE919;
 }
 
 main #vistaPersonaje .peliculas article h3 {
     color: #FFE919;
 }
+
 
 
 @media(max-width:600px) {
@@ -107,8 +139,8 @@ main #vistaPersonaje .peliculas article h3 {
     main #vistaPersonaje .peliculas article {
         width: 97%;
         margin: 1% 1.5%;
-       
+
     }
-    
+
 
 }

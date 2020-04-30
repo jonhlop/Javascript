@@ -1,0 +1,590 @@
+@import url(reset.css);
+
+/* google fonts Monserrat*/
+
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap");
+
+/*
+font-family: 'Montserrat',
+sans-serif;
+font-family: 'Handlee',
+cursive;
+
+colores:
+primario: #FA573A
+secundario: #21242E
+*/
+:root {
+  --color-principal: #fa573a;
+  --color-secundario: #21242e;
+  --b-movil: 26.563em;
+  --b-tablet: 48em;
+  --b-desktop: 62.75em;
+  --anchomaximo: 1100px;
+  --fuenteprincipal: "Montserrat", sans-serif;
+  --fuentesecundaria: "Handlee", cursive;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuenteprincipal);
+  font-size: 1em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: var(--anchomaximo);
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+/*INICIO HEADER*/
+header .nav_top {
+  background-color: var(--color-secundario);
+  padding: 20px 0;
+}
+
+.row {
+  display: flex;
+}
+
+header .nav_top a {
+  color: white;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+header .nav_top a span {
+  display: none;
+}
+
+header .nav_top .row {
+  justify-content: space-between;
+}
+
+header .nav_top .row div {
+  padding: 0 10px;
+}
+
+header .nav_top i {
+  color: var(--color-principal);
+}
+
+header nav {
+  padding: 20px;
+}
+
+header .hamburguesa {
+  cursor: pointer;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+header .logo {
+  width: 50%;
+}
+
+header .logo img {
+  max-width: 150px;
+}
+
+header .hamburguesa div {
+  border-top: 2px solid #aaa;
+  margin: 0.35em;
+  width: 1.875em;
+}
+
+header nav .row {
+  flex-wrap: wrap;
+}
+
+header nav ul {
+  display: none;
+  width: 100%;
+}
+
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 1.25em;
+  text-align: center;
+  color: #aaa;
+  border-bottom: 2px solid #aaa;
+}
+
+header nav ul li a:hover {
+  color: var(--color-principal);
+}
+
+header nav ul li .activo {
+  color: var(--color-principal);
+}
+
+@media (min-width: 48em) {
+  header .nav_top a span {
+    display: inline;
+  }
+}
+
+@media (min-width: 62.75em) {
+  header .hamburguesa {
+    display: none;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  header .logo {
+    width: 50%;
+  }
+
+  header nav ul {
+    display: flex;
+    width: 50%;
+  }
+
+  header nav ul li {
+    width: 100%;
+  }
+
+  header nav ul li a {
+    padding: 0.8em 0;
+    text-align: center;
+    border-bottom: 0px;
+  }
+}
+
+/*FINAL HEADER*/
+
+/* ---------------------------------- hero ---------------------------------- */
+
+.hero {
+  background-image: url(../images/fondo.jpg);
+  height: 35em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #aaa;
+  background-blend-mode: multiply;
+
+  display: flex;
+}
+
+.hero>div {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  font-family: var(--fuentesecundaria);
+  color: white;
+}
+
+.hero h2 {
+  margin: 1em 0;
+  font-size: 1.5em;
+  color: var(--color-principal);
+}
+
+.hero p {
+  font-size: 1.15em;
+  color: white;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--color-principal);
+  color: white;
+  padding: 1.15em;
+  text-decoration: none;
+  border: 1px solid var(--color-principal);
+  margin: 1em 0;
+}
+
+.boton i {
+  transition: transform 0.5s;
+}
+
+.boton:hover {
+  background-color: transparent;
+  color: var(--color-principal);
+}
+
+.boton:hover i {
+  transform: translateX(5px);
+}
+
+.hero .social li {
+  display: inline-block;
+  font-size: 2em;
+  margin-right: 1em;
+}
+
+.hero .social a {
+  color: white;
+  text-decoration: none;
+}
+
+/*INICIO MAIN SECTION OURSERVICES*/
+
+main section {
+  padding: 3em 0;
+}
+
+main section h2 {
+  color: black;
+  font-family: var(--fuentesecundaria);
+  font-size: 2em;
+  text-align: center;
+}
+
+main section h2 span {
+  color: var(--color-principal);
+}
+
+main section .underline {
+  position: relative;
+  width: 5em;
+  margin: 0 auto;
+  color: var(--color-principal);
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+main section .underline hr {
+  border-color: var(--color-principal);
+  position: absolute;
+  top: -0.126em;
+  width: 100%;
+}
+
+main section .underline span {
+  display: block;
+  text-align: center;
+}
+
+main section .row {
+  padding: 0 0.825em;
+  flex-wrap: wrap;
+}
+
+main section .row article {
+  width: 100%;
+  padding: 1.825em 0;
+  border-bottom: 1px solid #aaa;
+}
+
+main section .row article div i {
+  color: var(--color-principal);
+  font-size: 2em;
+  padding: 0.8rem;
+  border: 2px solid var(--color-principal);
+}
+
+main section article .fa-truck {
+  transform: rotateY(180deg);
+}
+
+main section article h3 {
+  font-weight: 700;
+  margin: 1em 0;
+}
+
+.enlace {
+  text-decoration: none;
+  color: var(--color-principal);
+  margin-top: 1em;
+  display: block;
+}
+
+/* -------------------------- MAIN SEGUNDA SECCION ABOUT US-------------------------- */
+
+main section .row .columna {
+  border: 0px;
+}
+
+main section .row .columna h4 {
+  margin-bottom: 1em;
+  color: var(--color-principal);
+}
+
+main section .row .columna .marco {
+  border: 4px solid var(--color-principal);
+  transform: rotateZ(10deg);
+  transition: 1s;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section .marco img {
+  transform: rotateZ(-10deg);
+  transition: 1s;
+}
+
+main section .columna:hover .marco,
+main section .columna:hover img {
+  transform: rotateZ(0deg);
+}
+
+@media (min-width: 48em) {
+  main section .row .columna {
+    width: 50%;
+  }
+}
+
+@media (min-width: 62.75em) {}
+
+/* -------------------------------- mediamain ------------------------------- */
+
+@media (min-width: 48em) {
+  main section .row article {
+    width: 50%;
+    padding: 1.825em 0.825em;
+    border-bottom: 0px;
+    border-left: 1px solid #aaa;
+    margin-bottom: 1em;
+  }
+
+  main section .row article:nth-child(3) {
+    width: 100%;
+  }
+}
+
+@media (min-width: 62.75em) {
+  main section .row article {
+    width: 33.33%;
+  }
+
+  main section .row article:nth-child(3) {
+    width: 33.33%;
+  }
+}
+
+/*FIN MAIN*/
+
+/*INICIO FOOTER*/
+
+footer {
+  background-color: var(--color-secundario);
+  padding: 1.825em 0;
+  text-align: center;
+}
+
+footer a,
+footer p {
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+@media (min-width: 48em) {
+  footer {
+    text-align: left;
+  }
+}
+
+/*FIN DEL FOOTER*/
+
+/* -------------------------- INICIO DE PAGINA BLOG-------------------------*/
+
+main section .contenido article h4 {
+  color: var(--color-principal);
+  margin: 0.825em 1em;
+  font-weight: 700;
+}
+
+main section .contenido article h3 {
+  font-weight: 700;
+  margin-left: 1em;
+}
+
+main section .contenido article p {
+  margin-left: 1em;
+}
+
+main section .contenido article a {
+  font-weight: 700;
+  margin-left: 1em;
+}
+
+#ourblogs .row article {
+  border: 0px;
+}
+
+main section article .calendario {
+  position: relative;
+}
+
+main section article .fecha {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-principal);
+  opacity: 0.85;
+  text-align: center;
+}
+
+main section .row article .fecha p {
+  color: white;
+  font-size: 1.36em;
+  font-weight: 700;
+  margin: 0.625em;
+  opacity: 1;
+}
+
+/* --------------------------- INICIO MEDIA MOVIL --------------------------- */
+
+@media (min-width: 48em) {
+  #ourblogs .row article {
+    width: 50%;
+  }
+}
+
+@media (min-width: 62.75em) {
+  #ourblogs .row article {
+    width: 33.33%;
+  }
+
+  main section .contenido {
+    margin-bottom: 7em;
+  }
+}
+
+/* --------------------------- INICIO PAGINA MENU --------------------------- */
+
+main section h1 {
+  color: white;
+  font-family: var(--fuentesecundaria);
+  font-size: 2em;
+  text-align: center;
+}
+
+main section h1 span {
+  color: var(--color-principal);
+}
+
+main #todaymenu {
+  background-color: var(--color-secundario);
+  color: white;
+}
+
+main .row nav {
+  padding-bottom: 1.563em;
+}
+
+main .row nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.825em;
+  margin: 1em;
+  font-weight: 700;
+}
+
+main .row nav ul li a:hover {
+  background-color: var(--color-principal);
+  border-radius: 0.313em;
+  width: 90%;
+  transition: 0.5s;
+}
+
+main .row .line_menu {
+  width: 15%;
+}
+
+main .row .line_menu hr {
+  border-color: var(--color-principal);
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+main section .row .menu {
+  border: 0px;
+  width: 35%;
+}
+
+main section .row .carta {
+  border: 0px;
+  width: 65%;
+}
+
+main section .row .carta .comida .img_comida {
+  padding: 0.625em;
+  width: 35%;
+}
+
+main section .row .carta .comida .descripcion {
+  padding-left: 25px;
+  width: 65%;
+}
+
+main .row .carta .comida .descripcion span {
+  font-weight: 700;
+  margin-left: 0.938em;
+  color: var(--color-principal);
+}
+
+main section .row article .descripcion i {
+  font-size: 1em;
+  border: 0;
+}
+
+main section .flecha a {
+  color: transparent;
+}
+
+/* ------------------------------- media movil ------------------------------ */
+
+@media (max-width: 48em) {
+  main section .row .menu {
+    width: 100%;
+  }
+
+  main section .row .carta {
+    width: 100%;
+  }
+
+  main section .row .carta .comida .img_comida {
+    width: 95%;
+  }
+
+  main section .row .carta .comida .descripcion {
+    width: 100%;
+  }
+
+  main section .flecha a {
+    color: white;
+    background-color: var(--color-principal);
+    display: block;
+    text-align: center;
+    padding-top: 0.313em;
+    width: 2em;
+    height: 2em;
+    border-radius: 0.313em;
+    float: right;
+    margin-right: 2em;
+  }
+}

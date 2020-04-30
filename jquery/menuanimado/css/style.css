@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    text-align: center;
+    border-right: 1px solid white;
+}
+
+#marcador {
+    position: relative;
+    left: 0;
+    top: 0;
+    border-bottom: 5px solid tomato;
+    width: 0;
+}

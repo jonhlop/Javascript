@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cuadrado"></div>
+    <div class="cuadrado"></div>
+    <div class="cuadrado"></div>
+    <div class="cuadrado"></div>
+    <div class="cuadrado"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script>
+        //solo quiero cambiar o crear un estilo
+        $('.cuadrado').css('background-color', 'green')
+        // si quiero cambiar varias propiedades del css uso un jason dentro como parametro
+        var porcentaje = "20%"
+        $('.cuadrado').css({
+            'border-radius': porcentaje,
+            'border': '2px solid black',
+            'transform': 'rotateZ(30deg)',
+            'transition': '1s',
+        })
+    </script>
+
+</body>
+
+</html>

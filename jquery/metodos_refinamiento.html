@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de refinamiento</title>
+</head>
+
+<body>
+
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+    <div class="caja">Caja 4</div>
+    <div class="caja">Caja 5</div>
+    <div class="caja">Caja 6</div>
+    <div class="caja especial">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti amet itaque saepe tempora dolorem aliquam
+            nobis, molestiae obcaecati sunt dicta consequuntur sapiente ipsum delectus minima libero cumque quidem
+            doloremque sint.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nemo vitae, illo molestiae, natus reprehenderit
+            dolores assumenda ipsam doloribus inventore minus quo qui quae iste sint nobis voluptate placeat? Quo!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aspernatur ipsa, quam alias repudiandae ab,
+            explicabo dicta maxime, temporibus possimus nesciunt autem officiis ex laudantium cumque beatae sequi minima
+            recusandae.</p>
+    </div>
+    <div class="caja">Caja 8</div>
+    <div class="caja">Caja 9</div>
+    <div class="caja">Caja 10</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script>
+
+        var cajas = $('.caja');//cojeme todos los elementos cuya clase sea caja
+        //eq me permite acceder al nodo por el numero
+        cajas.eq(2).css('color', 'green');
+
+        //not seleeciona todos los elemetos menos el que esta dentro de not
+
+        cajas.not('.especial').css('background-color', 'tomato')
+
+        //find busca elementos 
+        cajas.find('p').eq(0).text('jonh');//BUSCA EL PRIMER P Y LO CMABIA
+
+        //next y prev me permiten acceder al elemento anterior o siguiente desde el que accedo
+
+        $('.especial').prev().css('font-size', '20px');//anterior a la clase que ponemo
+        $('.especial').next().css('font-size', '30px');//y siguiente a la clase que ponemos
+
+        //parent y children
+        $('.caja').parent().css('background-color', 'green')
+        $('.especial').children().eq(1).css('background-color', 'yellow')
+
+
+
+
+    </script>
+</body>
+
+</html>

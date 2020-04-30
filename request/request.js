@@ -3,7 +3,7 @@ var seccionBlog = document.querySelector('#blog')
 
 var pedido = new XMLHttpRequest();
 //ABRIR UN CANAL DE COMUNICACIÓN
-pedido.open('GET', url, true);
+pedido.open('GET', url, true);// assincrono que no voy a esperar a que cargue este archivo para que cargue todo lo demas
 
 //HACER LA PETICION DEL PEDIDO
 pedido.send();

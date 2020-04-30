@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cuadrado"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>
+        //para ver diferentes tipos de animaciones la pagina es https://easings.net/
+
+        //ocultar y mostratr
+        /*   $('.cuadrado').hide(1000)//olcuta y se le mete segundos
+          $('cuadrado').delay(3000).show(1000) */
+
+        //fade fadein fadeout fadeto fadetoggele
+        /*  $('.cuadrado').fadeOut(1000, despedirse)
+         function despedirse() {
+             console.log('Hasta luego')
+         }
+ 
+         $('.cuadrado').fadeIn(1000)
+         $('.cuadrado').fadeTo(1000, 0.5)
+         $('.cuadrado').fadeTo(1000, 1)
+ 
+         ///fadetoggle hace lo contrario de lo que este en cada momento
+         $('.cuadrado').fadeToggle(2000)
+ 
+  */
+        //slide o efectos persiana slidedown slideup slidetoggle
+        // $('.cuadrado').slideUp(1000, 'easeOutCubic')
+        //animate que me permite animar reglas de css, funciona con json
+        //$('.cuadrado').animate({ 'margin-left': '500px' }, 1000, 'easeOutCubic')
+
+        //desplazamiento diagonal
+        //$('.cuadrado').animate({ 'margin-left': '500px', 'margin-top': '500px' }, 1000)
+
+        $('.cuadrado').animate({ 'margin-left': '500px' }, 1000).animate({ 'margin-top': '500px' }, 1000)
+
+
+    </script>
+</body>
+
+</html>

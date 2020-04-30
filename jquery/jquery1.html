@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li>Hola</li>
+        <li>Adios</li>
+        <li>Hasta luego</li>
+    </ul>
+    <div id="elemento">
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script>
+
+        /*   var lis = document.querySelectorAll('.menu li')
+          for (li of lis) {
+              li.innerText = "juan"
+          }
+   */
+        //jquey
+        var lis = $('.menu li'); // o jQuery()
+        lis.text('juan desde jquery')
+
+        lis.html('<strong>Hola </strong>')
+
+        var nombre = "juan"
+        var elemento = $('#elemento')
+        elemento.html(` <h2>hola${nombre} </h2>`)
+    </script>
+</body>
+
+</html>

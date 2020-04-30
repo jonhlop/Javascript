@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a data-color="red" href="">rojo<a></li>
+        <li><a data-color="green" href="">verde<a></li>
+        <li><a data-color="blue" href="">azul<a></li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script>
+        var botones = $('#menu li a');
+
+        botones.on('click', cargarColor);
+
+        function cargarColor(event) {
+            event.preventDefault();
+            var color = $(this).data('color');
+
+            $('body').css({
+                'background-color': color, 'transition': '1s'
+            })
+        }
+
+
+
+    </script>
+</body>
+
+</html>

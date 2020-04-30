@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offset</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin: 100px 0;
+            position: absolute;
+            top: 100px;
+            left: 300px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="cuadrado"></div>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script>
+
+        var miTop = $('.cuadrado').offset().top;
+        var miLeft = $('.cuadrado').offset().left;
+
+        //position solo se puede usar con position: absolute
+
+        var cordenadas = $('.cuadrado').position()
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bote pelota</title>
+
+    <style>
+        .pelota {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 20px;
+        }
+
+        .animacion {
+            animation-name: botar, deformar;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0);
+        }
+
+        @keyframes botar {
+            0% {
+                top: 20px;
+            }
+
+            100% {
+                top: 500px;
+            }
+        }
+
+        @keyframes deformar {
+            0% {
+                transform: scale(0.9, 1);
+            }
+
+            100% {
+                transform: scale(1.2, 0.9);
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">Botar</button>
+
+    <div class="pelota "></div>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>
+        /* $('#btn').on('click', function () {
+            $('.pelota').animate({ 'top': '500px', 'width': '100px', 'height': '60px' }, 1000)
+            $('.pelota').addClass('color')
+            $('.pelota').animate({ 'top': '20px', 'width': '80px', 'height': '100px' }, 1000)
+
+        }) */
+        var estado = "parado"
+        $('#btn').on('click', function () {
+            if (estado != "botando") {
+                $('.pelota').addClass('animacion');
+                estado = "botando"
+                $(this).text('Parar')
+            } else {
+                $('.pelota').removeClass('animacion');
+                estado = "parado"
+                $(this).text('Botar')
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

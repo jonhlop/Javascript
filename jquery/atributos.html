@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos</title>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li><a data-color="red" href="http://google.es">ITEM 1</a></li>
+        <li><a data-color="blue" href="http://yahoo.es">ITEM 1</a></li>
+        <li><a data-color="green" href="http://amazon.es">ITEM 1</a></li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script>
+        var enlaces = $('.menu li a');
+        enlaces.attr('title', 'Soy un tooltip') //attr añade atributos
+
+        console.log(enlaces.attr('data-color'))//para leer atributos
+        
+
+    </script>
+
+</body>
+
+</html>

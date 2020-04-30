@@ -1,30 +1,42 @@
-function getSwapi(pUrlApi, pId = "") {
-    let url = 'https://swapi.dev/api/' + pUrlApi + "/" + pId; //esto coge la url ya que es comun, solo cambia el ID
+function getSwapi(pUrlApi, pId = "", pPage = "") {
+    let url = "https://swapi.dev/api/";
+
+    url += (pPage == "") ? pUrlApi + "/" + pId : pUrlApi + "/?page=" + pPage;
+
     let peticion = new XMLHttpRequest();
-    peticion.open('GET', url, true); //abrimos la peticion true porque es asincrona
+    peticion.open('GET', url, true);
     peticion.send();
 
     peticion.addEventListener('load', (event) => {
         let texto = event.target.responseText;
         let objetoSwapi = JSON.parse(texto);
         if (objetoSwapi.hasOwnProperty('results')) {
-            //pintar una lista de elementos en eventos .js
+            //pinto lista de elementos en eventos.js
+
+
+            let next = (objetoSwapi.next != null) ? objetoSwapi.next.split('=')[1] : "";
+
+
+            let prev = (objetoSwapi.previous != null) ? objetoSwapi.previous.split('=')[1] : "";
 
             const lista = objetoSwapi.results;
-            printList(lista)
 
+
+            printList(lista, next, prev);
+        } else if (pUrlApi == "films") {
+            //pinto una pelicula
+            printObjectFilm(objetoSwapi);
         } else {
             //pinto un objeto en eventos.js
-            printObject(objetoSwapi)
+            printObject(objetoSwapi);
         }
     });
-
 
 }
 
 getSwapi('people');
 
-'https://swapi.dev/api/people/'
-'https://swapi.dev/api/people/1'
-'https://swapi.dev/api/films/'
-'https://swapi.dev/api/films1/'
+// 'https://swapi.dev/api/people' //lista de people
+// 'https://swapi.dev/api/people/1/' //un unico people
+// 'https://swapi.dev/api/films/' //lista de films
+// 'https://swapi.dev/api/films/1/' //unico film
