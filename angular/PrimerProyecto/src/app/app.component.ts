@@ -24,4 +24,9 @@ export class AppComponent {
   onSumaRealizada($event) {
     console.log(`El resultado de la suma es ${$event}`);
   }
+
+  onTerminaContador($event) {
+    console.log($event);
+  }
+  
 }
