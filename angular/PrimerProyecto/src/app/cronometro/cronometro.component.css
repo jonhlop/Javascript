@@ -1,0 +1,11 @@
+.cuadrado {
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.cuadrado p{
+    font-size: 1em;
+}

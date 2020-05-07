@@ -1,0 +1,25 @@
+<!-- <h1>Hola mundo</h1>
+<app-saludo></app-saludo>
+<cronometro inicio="10" fin="3"></cronometro>
+<cronometro inicio="15" fin="3"></cronometro>
+<cronometro></cronometro> -->
+
+
+
+
+<!-- 
+    1. Crear el componente
+    2.Revisar el selector
+    3. crear los input
+    4- crear el btoon y la interaccion con el mismo
+ -->
+
+ <cronometro inicio="15" fin="3"></cronometro>
+ 
+<detalle-persona [persona]="arrPersonas[0]"></detalle-persona>
+<app-calculadora></app-calculadora>
+
+<neo-suma [num1]="numeros[0]" [num2]="numeros[4]"></neo-suma>
+<neo-suma num1="5" num2="10"></neo-suma>
+<neo-suma num1="20" num2="100"></neo-suma>
+<neo-suma num1="12" num2="73" (sumaRealizada)="onSumaRealizada($event)"></neo-suma>

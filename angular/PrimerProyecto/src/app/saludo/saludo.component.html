@@ -1,0 +1,16 @@
+<p>saludo works!</p>
+<p>Hola {{nombre}}</p> <!-- para visualizar la variable creada en componentes.ts con {{}} -->
+
+<p>{{mostrarMensaje()}}</p>
+<p [id]="identificador">Parrafo con id</p>
+
+<button (click)="pulsarBoton($event)">PULSA!!!</button>
+
+<select (change)="cambiaSelect($event)">
+    <option value="1">Uno</option>
+    <option value="2">Dos</option>
+    <option value="3">Tres</option>
+    <option value="4">Cuatro</option>
+</select>
+
+<input type="text" (input)="cambiaTexto($event)">
