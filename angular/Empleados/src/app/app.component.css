@@ -1,0 +1,13 @@
+.container {
+  padding: 0 150px;
+  display: flex;
+  flex-direction: row;
+}
+
+.container .left {
+  width: 30%;
+}
+
+.container .right {
+  width: 70%;
+}

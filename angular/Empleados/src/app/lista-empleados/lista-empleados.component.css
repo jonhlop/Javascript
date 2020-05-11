@@ -1,0 +1,28 @@
+.lista-empleados {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.lista-empleados .empleado {
+  width: 300px;
+  border: 1px solid gray;
+  padding: 10px 20px;
+}
+
+.lista-empleados .empleado h3 {
+  padding: 10px 5px;
+}
+
+.activo,
+.inactivo {
+  height: 30px;
+}
+
+.activo {
+  background-color: lightgreen;
+}
+
+.inactivo {
+  background-color: tomato;
+}

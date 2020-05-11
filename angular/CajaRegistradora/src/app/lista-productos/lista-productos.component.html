@@ -1,0 +1,14 @@
+<div class="lista-productos">
+    <div class="row">
+        {{titulo}}
+    </div>
+    <div class="row">
+        <div class="col-3" *ngFor="let producto of productos">
+            <div (click)="onClick(producto)">
+                <img [src]="producto.imagen">
+                <!-- entre corchetes para modificar un atributo a traves de una variable debemos meterlo entre corchetes -->
+                {{producto.descripcion()}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="episodios">
+    <div class="episodio" *ngFor="let episodio of episodios">
+        <h3>{{episodio.title}}</h3>
+        <p>{{episodio.director}}</p>
+    </div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Indice</th>
+            <th>Tittle</th>
+            <th>Director</th>
+            <th>Primero</th>
+            <th>Ultimo</th>
+            <th>Par</th>
+            <th>Impar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr
+            *ngFor="let episodio of episodios; let indice=index; let primero = first; let ultimo=last; let par=even; let impar=odd;">
+            <td>{{indice +1}}</td>
+            <td>{{episodio.title}}</td>
+            <td>{{episodio.director}}</td>
+            <td>{{primero}}</td>
+            <td>{{ultimo}}</td>
+            <td>{{par}}</td>
+            <td>{{impar}}</td>
+
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="agregarEpisodio()">Agrega episodio</button>

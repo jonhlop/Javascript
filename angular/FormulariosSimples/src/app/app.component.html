@@ -1,4 +1,4 @@
-<h1>Hola mundo</h1>
+<!-- <h1>Hola mundo</h1>
 <input type="text" [(ngModel)]="mensaje">
 <p>{{mensaje}}</p>
 <button (click)="onClick()">Cambia el mensaje</button>
@@ -18,3 +18,8 @@
 
 
 
+ -->
+
+<app-formulario (tareaEnviada)="onTareaEnviada($event)"></app-formulario>
+
+<app-lista-tareas [tareas]="arrTareas"></app-lista-tareas>

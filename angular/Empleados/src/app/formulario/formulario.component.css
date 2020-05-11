@@ -1,0 +1,14 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario .form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.formulario input {
+  height: 30px;
+}

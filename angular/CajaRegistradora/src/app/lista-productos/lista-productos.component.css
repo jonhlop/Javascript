@@ -1,0 +1,15 @@
+.lista-productos {
+  background-color: cadetblue;
+  padding: 30px;
+}
+h3 {
+  padding: 10px 30px;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  text-align: center;
+}

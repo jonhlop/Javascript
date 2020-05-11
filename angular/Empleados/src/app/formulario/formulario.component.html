@@ -1,0 +1,32 @@
+{{empleado |json}}
+<div class="formulario">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" [(ngModel)]="empleado.nombre">
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input type="text" [(ngModel)]="empleado.apellidos">
+    </div>
+    <div class="form-group">
+        <label>DNI</label>
+        <input type="text" [(ngModel)]="empleado.dni">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" [(ngModel)]="empleado.email">
+    </div>
+    <div class="form-group">
+        <select [(ngModel)]="empleado.departamento">
+            <option value="contabilidad">Contabilidad</option>
+            <option value="marketing">Marketing</option>
+            <option value="desarrollo">Desarrollo</option>
+            <option value="direccion">Direccion</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>¿Activo?</label>
+        <input type="checkbox" [(ngModel)]="empleado.activo">
+    </div>
+    <button (click)="onClick()">Enviar</button>
+</div>

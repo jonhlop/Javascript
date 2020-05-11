@@ -4,15 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
-import { ListaTareasComponent } from './lista-tareas/lista-tareas.component';
+import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.component';
 
 @NgModule({
-  declarations: [AppComponent, FormularioComponent, ListaTareasComponent],
+  declarations: [AppComponent, FormularioComponent, ListaEmpleadosComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
-
 })
-export class AppModule {
-  
-}
+export class AppModule {}
