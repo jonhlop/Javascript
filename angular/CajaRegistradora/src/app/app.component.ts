@@ -40,7 +40,15 @@ export class AppComponent {
   }
 
   onProductoSeleccionado($event) {
+  /*   if (this.productosSeleccionados.includes($event)) {
+      console.log('esta incluido');
+    } else {
+      console.log('no esta ')
+    }
     this.productosSeleccionados.push($event);
     console.log(this.productosSeleccionados);
-  }
+  } */
+
+
+  
 }

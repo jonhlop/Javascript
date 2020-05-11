@@ -1,0 +1,39 @@
+<section>
+    <a class="my-button navigate-to" [routerLink]="['/new']">Crear Post</a>
+    <select class="my-button filtro" (input)="filtroCategoria($event)">
+        <option value="all">Mostrar todo</option>
+        <option value="viajes">Viajes</option>
+        <option value="moda">Moda</option>
+        <option value="deportes">Deportes</option>
+        <option value="electronica">Electrónica</option>
+        <option value="videojuegos">Videojuegos</option>
+    </select>
+    <input type="text" class="busqueda" placeholder="Buscar titulo o autor" (input)="buscarPost($event)">
+    <select class="my-button ordenar" (input)="ordenarPor($event)">
+        <option value="reciente" selected>Más reciente</option>
+        <option value="antiguo">Más antiguo</option>
+    </select>
+    <article class="card" *ngFor="let post of posts">
+        <div class="article-wrapper">
+            <div class="card-body">
+                <h2 class="card-title">{{post.titulo}}</h2>
+                <h3 class="autor">Por <span>{{post.autor}}</span></h3>
+                <h4 [ngClass]="['categoria', post.categoria]" (click)="filtroCategoria($event)">{{post.categoria}}</h4>
+                <small class="text-muted fecha">{{post.fecha}}</small>
+            </div>
+            <div class="img-wrapper" *ngIf="post.imagenLocal || post.imagen; else imgPlaceholder">
+                <img [src]="post.imagenLocal || post.imagen" [alt]="'Imagen de ' + post.titulo">
+            </div>
+            <ng-template #imgPlaceholder>
+                <div class="img-wrapper">
+                    <img src="../../assets/images/Imagen predeterminada.jpg" alt="imagen predeterminada">
+                </div>
+            </ng-template>
+            <div class="card-body">
+                <p class="card-text">{{post.texto}}</p>
+            </div>
+            <span class="toggle-show" (click)="toggleMostrar($event)">Mostrar más</span>
+            <span class="toggle-show" (click)="toggleMostrar($event)">Mostrar menos</span>
+        </div>
+    </article>
+</section>
