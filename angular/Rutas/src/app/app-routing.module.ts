@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
+import { EscritorComponent } from './escritor/escritor.component';
 /* 
 /product/1234
 /product/2
@@ -16,6 +17,10 @@ const routes: Routes = [
   { path: 'info', component: InfoComponent },
   { path: 'contacta', component: ContactComponent },
   { path: 'producto/:productoID', component: DetalleProductoComponent },
+  {
+    path: 'escritor/:escritorNombre/libro/:libroId',
+    component: EscritorComponent,
+  },
   { path: '**', redirectTo: '/home' },
 ];
 
