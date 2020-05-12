@@ -1,0 +1,11 @@
+<p>Estpy visualizando el producto: {{producto}}</p>
+<div class="children">
+    <!-- para que aparezcan los hijos  de este componente-->
+    <ul>
+        <li [routerLink]="['/producto', producto, 'relacionados']">Relacionados</li>
+        <!-- los routerlink reciben como parametro un array para construir la ruta -->
+        <li [routerLink]="['/producto', producto, 'reviews']">Reviews</li>
+        <li [routerLink]="['/producto', producto, 'especificaciones']">Especificaciones</li>
+    </ul>
+    <router-outlet></router-outlet>
+</div>

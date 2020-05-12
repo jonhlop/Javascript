@@ -9,11 +9,10 @@
 <!-- para hacer enlaces mas rapidos sin recarga -->
 
 <router-outlet></router-outlet>
-<app-detalle-producto></app-detalle-producto>
+
 <div class="botones">
   <button (click)="onClick('/home')" [disabled]="!btnActivo">Home</button>
   <button (click)="onClick('/info')" [disabled]="!btnActivo">Info</button>
   <button (click)="onClick('/contacta')" [disabled]="!btnActivo">Cotacto</button>
 </div>
 
-<app-escritor></app-escritor>
