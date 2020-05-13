@@ -1,20 +1,55 @@
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Apellidos</th>
-    <th>Username</th>
-    <th>Email</th>
-    <th>Edad</th>
-    <th>Password</th>
-    <th>Activo</th>
-  </tr>
-  <tr *ngFor="let user of users">
-    <td>{{ user.nombre }}</td>
-    <td>{{ user.apellidos }}</td>
-    <td>{{ user.username }}</td>
-    <td>{{ user.email }}</td>
-    <td>{{ user.edad }}</td>
-    <td>{{ user.password }}</td>
-    <td>{{ user.activo }}</td>
-  </tr>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <table class="table">
+        <tr>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Edad</th>
+          <th>Password</th>
+          <th>Activo</th>
+        </tr>
+        <tr *ngFor="let user of users">
+          <td>{{ user.nombre }}</td>
+          <td>{{ user.apellidos }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.edad }}</td>
+          <td>{{ user.password }}</td>
+          <td>{{ user.activo }}</td>
+        </tr>
+      </table>
+      <div class="row">
+        <div class="col-12">
+          <button class="btn btn-info" (click)="onClickActive()">User Active</button>
+          <button class="btn btn-warning" (click)="onClickAll()">
+            TODOS
+          </button>
+          <button class="btn btn-primary" (click)="onClickMayores()">Mayores de edad</button>
+          <button class="btn btn-primary" (click)="onclickEmails()">Email</button>
+
+
+          <div class="row mt-5">
+
+            <input type="text" class="form-control" placeholder="Busqueda por usuario" (change)="onChange($event)">
+          </div>
+          <div class="row mt-5">
+
+            <input type="text" class="form-control" placeholder="Busqueda por nombre completo"
+              (change)="onChangeNombreCompleto($event)">
+          </div>
+          <div class="row mt-5">
+
+
+          </div>
+          <div class="col-4">
+            <app-lista-emails></app-lista-emails>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
