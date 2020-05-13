@@ -1,0 +1,14 @@
+<div class="producto">
+    <h3>{{producto.nombre}}</h3>
+    <p>Cantidad: {{producto.cantidad}}</p>
+    <button class="btn btn-sm btn-warning" (click)="onClickComprar()">Comprado</button>
+    <div [ngSwitch]="producto.departamento">
+
+        <img src="../../../assets/images/carniceria.png" *ngSwitchCase="Carniceria">
+
+        <img src="../../../assets/images/fruteria.png" *ngSwitchCase="Fruteria">
+        <img src="../../../assets/images/higiene.png" *ngSwitchCase="Higiene">
+        <img src="../../../assets/images/panaderia.png" *ngSwitchCase="Panaderia">
+    </div>
+
+</div>

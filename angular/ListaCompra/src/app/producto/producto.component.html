@@ -1,0 +1,18 @@
+<div class="producto d-flex flex-row justify-content-around">
+    <div>
+        <h2>{{ producto.nombre }}</h2>
+        <p>CANTIDAD: {{ producto.cantidad }}</p>
+        <button class="btn btn-success btn-sm"
+            [ngClass]="{ 'btn-success': !producto.comprado, 'btn-danger': producto.comprado }"
+            (click)="onClickComprar()">
+            {{ (producto.comprado) ? 'RETIRAR' : 'COMPRAR' }}
+        </button>
+    </div>
+    <div [ngSwitch]="producto.departamento">
+        <img src="assets/images/carniceria.png" *ngSwitchCase="'carniceria'">
+        <img src="assets/images/fruteria.png" *ngSwitchCase="'fruteria'">
+        <img src="assets/images/panaderia.png" *ngSwitchCase="'panaderia'">
+        <img src="assets/images/hogar.png" *ngSwitchCase="'limpieza'">
+        <img src="assets/images/higiene.png" *ngSwitchCase="'higiene'">
+    </div>
+</div>
