@@ -1,0 +1,11 @@
+<div class="escritores">
+    <div class="escritor" *ngFor="let escritor of arrEscritores">
+        <!-- tengo que recorrer con un for el arrai creado en .ts para poder pintarlos, y me pintara tantos como haya en el array-->
+        <div class="row" [routerLink]="['/escritor', escritor.id]">
+            <h3> {{escritor.nombre}} {{escritor.apellidos}}</h3>
+            <p> {{escritor.pais}}</p>
+            <img [src]="escritor.imagen">
+
+        </div>
+    </div>
+</div>
