@@ -10,10 +10,25 @@ import { Escritor } from '../models/escritor.model';
 export class ListaComponent implements OnInit {
   arrEscritores: Escritor[];
   constructor(private escritoresService: EscritoresService) {
-    this.arrEscritores=[];
+    this.arrEscritores = [];
   }
 
   async ngOnInit() {
-  this.arrEscritores = await this.escritoresService.getAll();
+    this.recuperarTodosEscritores();
+  }
+
+  onChangePais($event) {
+    if($event.target.value==='todos'){
+      this.recuperarTodosEscritores();
+    }else{
+      this.escritoresService.getByPais($event.target.value).then((escritores) => {
+      console.log(escritores);
+      this.arrEscritores = escritores;
+    });
+    }
+    
+  }
+  async recuperarTodosEscritores() {
+    this.arrEscritores = await this.escritoresService.getAll();
   }
 }

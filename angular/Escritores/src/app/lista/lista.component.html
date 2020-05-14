@@ -1,3 +1,10 @@
+<select (change)="onChangePais($event)">
+    <option value="todos">TODOS</option>
+    <option value="españa">Españita</option>
+    <option value="reino unido">Los ingleses</option>
+    <option value="chile">No mames wey</option>
+    <option value="canadá">Robin Sparkles</option>
+</select>
 <div class="escritores row">
     <div class="col-3" *ngFor="let escritor of arrEscritores">
         <div class="escritor" [routerLink]="['/escritor', escritor.id]">

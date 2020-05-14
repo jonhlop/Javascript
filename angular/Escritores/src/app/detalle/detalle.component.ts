@@ -13,11 +13,12 @@ export class DetalleComponent implements OnInit {
   detalleEscritor: Escritor;
 
   constructor(
-    private activatedRoute: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,//recuperamos laparte variable de la ruta
     private escritoresService: EscritoresService
   ) {}
 
   ngOnInit(): void {
+    //me subscribo a el para los cambios que se podruzcan 
     this.activatedRoute.params.subscribe(async params => {
       this.detalleEscritor = await this.escritoresService.getById(parseInt(params.escritorId));
     });
