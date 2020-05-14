@@ -18,13 +18,12 @@ export class EscritoresService {
     });
     return prom;
   }
-  getByID(pId: number): Promise<Escritor[]>{
-    return new Promise((resolve, reject)=>{
-      const escritorEcontrado = ESCRITORES.find(escritor=>{
+  getById(pId: number): Promise<Escritor> {
+    return new Promise((resolve, reject) => {
+      const escritorEncontrado = ESCRITORES.find(escritor => {
         return escritor.id === pId;
-      })
-      resolve(escritorEcontrado);
-    })
-    
+      });
+      resolve(escritorEncontrado);
+    });
   }
 }

@@ -9,7 +9,9 @@ import { EscritoresService } from '../escritores.service';
   styleUrls: ['./detalle.component.css'],
 })
 export class DetalleComponent implements OnInit {
-  escritorId: number;
+
+  detalleEscritor: Escritor;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private escritoresService: EscritoresService
@@ -17,7 +19,8 @@ export class DetalleComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(async params => {
-      this.detalleEscritor= await this.escritoresService.getByID(params.escritorId);
+      this.detalleEscritor = await this.escritoresService.getById(parseInt(params.escritorId));
     });
   }
+
 }
