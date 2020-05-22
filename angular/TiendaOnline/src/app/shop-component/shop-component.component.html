@@ -1,0 +1,26 @@
+<nav class="navbar navbar-light bg-dark justify-content-between">
+    <a class="navbar-brand">Tienda Online Solo de APPLE </a>
+    <form class="form-inline">
+      <label>Buscar por categoria</label>
+      <select (change)="onChange($event)">
+        <option *ngFor="let categoria of categorias">
+          {{categoria}}
+        </option>
+      </select>
+    </form>
+  </nav>
+
+
+<div class="cabecera">
+    <div class="productos" >
+        <div class="producto" *ngFor="let producto of productos">
+            <img [src]="producto.image">
+            <h3>{{producto.name}}</h3>
+            <p>{{producto.description}}</p>
+            <p>Precio: {{producto.price}} Rupias</p>
+            <button (click)="onClick(producto)" class="btn btn-success">COMPRALO LOCO</button>
+        </div>
+
+
+    </div>
+</div>

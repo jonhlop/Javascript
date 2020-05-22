@@ -1,0 +1,6 @@
+<div class="pregunta" *ngIf="preguntaActiva">
+    <h3>{{ preguntaActiva.texto }}</h3>
+    <app-respuestas [respuestas]="preguntaActiva.respuestas" (respuestaSeleccionada)="onRespuestaSeleccionada($event)">
+    </app-respuestas>
+    <p>{{ mensaje }}</p>
+</div>

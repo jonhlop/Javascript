@@ -1,0 +1,38 @@
+.contain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.card img {
+  width: 100%;
+ 
+
+}
+
+.card .flotador {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: tomato;
+  color: white;
+  padding: 8px;
+}
+
+.alive {
+  background-color: green;
+
+}
+
+.dead {
+    background-color: tomato;
+}

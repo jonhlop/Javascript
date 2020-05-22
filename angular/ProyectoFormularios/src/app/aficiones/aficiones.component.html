@@ -1,0 +1,10 @@
+<input type="text" class="form-control" (change)="onChange($event)">
+
+<ul class="list-group">
+    <li *ngFor="let aficion of aficionesArr" class="list-group-item">
+        {{aficion}}
+    </li>
+
+</ul>
+
+<button (click)="onClick()">Enviar todos los formularios</button>

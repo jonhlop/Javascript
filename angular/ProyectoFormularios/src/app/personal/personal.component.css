@@ -1,0 +1,13 @@
+.container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: #ccc;
+    
+}
+
+.botonera{
+    justify-content: space-between;
+   
+
+}

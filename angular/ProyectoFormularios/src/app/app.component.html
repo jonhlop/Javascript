@@ -1,0 +1,14 @@
+<!-- para propiedades con "-" usar delante [attr.propiedad] -->
+
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-12">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" [ngStyle]="{width: completo+'%'}" [attr.aria-valuenow]="completo" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+
+</div>

@@ -1,0 +1,24 @@
+
+    <form [formGroup]="formPersonal" (ngSubmit)="onSubmit()" novalidate class="col-12">
+        <div class="form-group col-12">
+            <label>Nombre</label>
+            <input type="text" formControlName="nombre" class="form-control">
+        </div>
+        <div class="form-group col-12">
+            <label>Apellidos</label>
+            <input type="text" formControlName="apellidos" class="form-control">
+        </div>
+        <div class="form-group col-12">
+            <label>Edad</label>
+            <input type="text" formControlName="edad" class="form-control">
+        </div>
+        <div class="form-group col-12">
+            <label>Direccion</label>
+            <input type="text" formControlName="direccion" class="form-control">
+        </div>
+        <div class="form-group col-12 botonera">
+           
+            <input type="submit" name="name" class="btn btn-danger col-6" value="Siguiente"
+                [disabled]="!formPersonal.valid">
+        </div>
+    </form>

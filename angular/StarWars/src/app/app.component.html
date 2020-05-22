@@ -1,0 +1,26 @@
+<div class="cabecera">
+    <h1>{{paginaActual}} / {{numPaginas}}</h1>
+
+    <div>
+        <button (click)="changePage(false)">Anterior</button>
+        <button (click)="changePage(true)">Siguiente</button>
+    </div>
+</div>
+
+<div class="planetas">
+    <div class="planet" *ngFor="let planeta of planetas">
+        <p>Nombre: {{planeta.name}}</p>
+        <p>poblacion: {{planeta.population}}</p>
+        <p>Clima: {{planeta.climate}}</p>
+        <p>Diametro: {{planeta.diameter}}</p>
+
+    </div>
+</div>
+
+<!-- 
+    mostrar de cada planeta 
+    -nombre
+    -poblacion
+    -clima
+    -diametro
+ -->

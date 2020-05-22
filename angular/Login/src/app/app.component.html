@@ -1,0 +1,4 @@
+<div class="container">
+  <app-login-dos *ngIf="!usersService.isLogged"></app-login-dos>
+  <app-home *ngIf="usersService.isLogged"></app-home>
+</div>
