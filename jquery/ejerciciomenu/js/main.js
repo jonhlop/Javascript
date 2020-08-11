@@ -19,3 +19,14 @@ function ventanaSalir() {
 
 }
 
+
+var boton = $('.boton');
+boton.on('click', desplegarMenu);
+var menu = $('#menu');
+
+function desplegarMenu() {
+    let posicion = (menu.css('right') == '0px') ? '-200px' : '0px';
+    menu.animate({
+        'right': posicion
+    }, 1000);
+}

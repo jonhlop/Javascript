@@ -4,23 +4,31 @@ import { Producto } from '../models/producto.model';
 @Component({
   selector: 'app-comanda',
   templateUrl: './comanda.component.html',
-  styleUrls: ['./comanda.component.css'],
+  styleUrls: ['./comanda.component.css']
 })
 export class ComandaComponent implements OnInit {
+
   @Input() productos: Producto[];
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   calcularTotal() {
     let resultado = 0;
     for (let producto of this.productos) {
-      resultado += producto.precio;
+      resultado += (producto.precio * producto.cantidad);
     }
-    return resultado;
+    return resultado.toFixed(2);
   }
+
   onClickBorrar(pIndice) {
-    this.productos.splice(pIndice, 1);
+    if (this.productos[pIndice].cantidad > 1) {
+      this.productos[pIndice].cantidad--;
+    } else {
+      this.productos.splice(pIndice, 1);
+    }
   }
+
 }

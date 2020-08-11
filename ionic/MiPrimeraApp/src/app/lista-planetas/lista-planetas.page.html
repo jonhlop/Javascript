@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ListaPlanetas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="listaPlanetas">
+  <ul *ngFor="let planeta of planets">
+    <li>Name: {{planeta.name}}</li>
+    <li>Clim: {{planeta.climate}}</li>
+  </ul>
+</div>
+</ion-content>
